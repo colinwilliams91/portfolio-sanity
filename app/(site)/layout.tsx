@@ -13,16 +13,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="max-w-3xl mx-auto py-10">
+      <body className="max-w-3xl mx-auto py-20">
         <header>
           <Link
             href="/"
             className="bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent text-lg font-bold"
           >
-            Williams
+            Portfolio
           </Link>
         </header>
-        <main className="py-20">{children}</main>
+        <main className="py-10">{children}</main>
       </body>
     </html>
   );
