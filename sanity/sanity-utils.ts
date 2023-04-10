@@ -50,7 +50,11 @@ export const getPage = async (slug: string): Promise<Page> => {
       _createdAt,
       title,
       "slug": slug.current,
-      content
+      content,
+      linkedIn,
+      gmail,
+      github,
+      twitter
     }`,
     { slug }
   )

@@ -23,6 +23,30 @@ const page = {
       type: "array",
       of: [{ type: "block" }],
     },
+    {
+      name: "linkedIn",
+      title: "LinkedIn",
+      type: "array",
+      of: [{ type: "block" }],
+    },
+    {
+      name: "gmail",
+      title: "Gmail",
+      type: "array",
+      of: [{ type: "block" }],
+    },
+    {
+      name: "github",
+      title: "Github",
+      type: "array",
+      of: [{ type: "block" }],
+    },
+    {
+      name: "twitter",
+      title: "Twitter",
+      type: "array",
+      of: [{ type: "block" }],
+    },
   ],
 };
 
