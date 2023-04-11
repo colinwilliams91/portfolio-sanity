@@ -54,7 +54,15 @@ export const getPage = async (slug: string): Promise<Page> => {
       linkedIn,
       gmail,
       github,
-      twitter
+      twitter,
+      system,
+      server,
+      database,
+      client,
+      styles,
+      audiovisual,
+      deployment,
+      management
     }`,
     { slug }
   )

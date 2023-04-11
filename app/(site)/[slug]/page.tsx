@@ -42,6 +42,14 @@ const Page = async ({ params }: Props) => {
           <PortableText value={page.twitter} />
         </div>
       )}
+      {page.system && (
+        <>
+          <h3 className="text-center font-semibold pb-1">SYSTEM</h3>
+          <div className="text-2xl text-center border pb-1 px-2 rounded-2xl">
+            <PortableText value={page.system} />
+          </div>
+        </>
+      )}
     </div>
   );
 };

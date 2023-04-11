@@ -47,6 +47,54 @@ const page = {
       type: "array",
       of: [{ type: "block" }],
     },
+    {
+      name: "system",
+      title: "System",
+      type: "array",
+      of: [{ type: "block" }],
+    },
+    {
+      name: "server",
+      title: "Server",
+      type: "array",
+      of: [{ type: "block" }],
+    },
+    {
+      name: "database",
+      title: "Database",
+      type: "array",
+      of: [{ type: "block" }],
+    },
+    {
+      name: "client",
+      title: "Client",
+      type: "array",
+      of: [{ type: "block" }],
+    },
+    {
+      name: "styles",
+      title: "Styles",
+      type: "array",
+      of: [{ type: "block" }],
+    },
+    {
+      name: "audiovisual",
+      title: "Audiovisual",
+      type: "array",
+      of: [{ type: "block" }],
+    },
+    {
+      name: "deployment",
+      title: "Deployment",
+      type: "array",
+      of: [{ type: "block" }],
+    },
+    {
+      name: "management",
+      title: "Management",
+      type: "array",
+      of: [{ type: "block" }],
+    },
   ],
 };
 
