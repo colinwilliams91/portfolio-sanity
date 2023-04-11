@@ -11,11 +11,11 @@ export type Page = {
   github: PortableTextBlock[];
   twitter: PortableTextBlock[];
   system: string[];
-  server: PortableTextBlock[];
-  database: PortableTextBlock[];
-  client: PortableTextBlock[];
-  styles: PortableTextBlock[];
-  audiovisual: PortableTextBlock[];
-  deployment: PortableTextBlock[];
-  management: PortableTextBlock[];
+  server: string[];
+  database: string[];
+  client: string[];
+  styles: string[];
+  audiovisual: string[];
+  deployment: string[];
+  management: string[];
 };
