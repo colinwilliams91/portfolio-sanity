@@ -38,6 +38,12 @@ const project = {
       type: 'array',
       of: [{ type: 'block' }]
     },
+    {
+      name: 'contributions',
+      title: 'Contributions',
+      type: 'array',
+      of: [{ type: 'block' }]
+    },
   ],
 };
 

@@ -26,10 +26,6 @@ const Project = async ({ params }: Props) => {
           View Project
         </a>
       </header>
-      {/* content goes here */}
-      <div className="text-lg text-gray-400 mt-5">
-        <PortableText value={project.content} />
-      </div>
       {/* image goes here */}
       <Image
         src={project.image}
@@ -38,6 +34,14 @@ const Project = async ({ params }: Props) => {
         height={1080}
         className="mt-10 border-2 border-gray-400 object-cover rounded-xl"
       />
+      {/* content goes here */}
+      <div className="text-lg text-gray-400 mt-5">
+        <PortableText value={project.content} />
+      </div>
+      {/* contributions go here */}
+      <div className="text-lg text-gray-400 mt-5">
+        <PortableText value={project.contributions} />
+      </div>
     </div>
   );
 };
