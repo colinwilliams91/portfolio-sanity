@@ -10,7 +10,7 @@ export type Page = {
   gmail: PortableTextBlock[];
   github: PortableTextBlock[];
   twitter: PortableTextBlock[];
-  system: PortableTextBlock[];
+  system: string[];
   server: PortableTextBlock[];
   database: PortableTextBlock[];
   client: PortableTextBlock[];

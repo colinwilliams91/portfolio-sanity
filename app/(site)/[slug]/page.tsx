@@ -1,5 +1,8 @@
+"use client";
 import { getPage } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
+
+import System from "../../../app/components/System";
 
 import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
 
@@ -42,16 +45,21 @@ const Page = async ({ params }: Props) => {
           <PortableText value={page.twitter} />
         </div>
       )}
-      {page.system && (
-        <>
-          <h3 className="text-center font-semibold pb-1">SYSTEM</h3>
-          <div className="text-2xl text-center border pb-1 px-2 rounded-2xl">
-            <PortableText value={page.system} />
-          </div>
-        </>
-      )}
+      {page.system && <System {...page} />}
     </div>
   );
 };
+
+// <>
+//   <header>{repeatedElements.map(() => throwTrigram())}</header>
+//   <h3 className="text-center font-semibold pb-1">SYSTEM</h3>
+//   <div className="text-2xl text-center border pb-1 px-1 rounded-2xl">
+//     {page.system.map((el, i) => (
+//       <span key={i} className="p-2">
+//         {el}
+//       </span>
+//     ))}
+//   </div>
+// </>
 
 export default Page;

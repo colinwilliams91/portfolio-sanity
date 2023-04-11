@@ -51,7 +51,7 @@ const page = {
       name: "system",
       title: "System",
       type: "array",
-      of: [{ type: "block" }],
+      of: [{ type: "text" }],
     },
     {
       name: "server",
