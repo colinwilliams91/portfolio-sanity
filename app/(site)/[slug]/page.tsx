@@ -1,4 +1,3 @@
-"use client";
 import { getPage } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 
