@@ -1,7 +1,9 @@
 import { getPage } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
+import Image from "next/image";
 
 import System from "../../../app/components/System";
+import Headshot from "../../../app/components/Headshot";
 
 import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
 
@@ -14,9 +16,11 @@ const Page = async ({ params }: Props) => {
 
   return (
     <div>
-      <h1 className="bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent text-5xl font-extrabold drop-shadow">
+      <h1 className="flex bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent text-5xl font-extrabold drop-shadow justify-center">
         {page.title}
       </h1>
+      {/* HeadShot goes here */}
+      {page.image && <Headshot {...page} />}
       <div className="text-xl text-gray-300 mt-10 font-bold">
         <PortableText value={page.content} />
       </div>

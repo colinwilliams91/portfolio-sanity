@@ -5,6 +5,7 @@ export type Page = {
   _createdAt: Date;
   title: string;
   slug: string;
+  image: string;
   content: PortableTextBlock[];
   linkedIn: PortableTextBlock[];
   gmail: PortableTextBlock[];

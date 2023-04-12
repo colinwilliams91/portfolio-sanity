@@ -40,7 +40,8 @@ export const getPages = async (): Promise<Page[]> => {
       _id,
       _createdAt,
       title,
-      "slug": slug.current
+      "slug": slug.current,
+      "image": image.asset->url
     }`
   )
 };
@@ -52,6 +53,7 @@ export const getPage = async (slug: string): Promise<Page> => {
       _createdAt,
       title,
       "slug": slug.current,
+      "image": image.asset->url,
       content,
       linkedIn,
       gmail,

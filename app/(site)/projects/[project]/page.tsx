@@ -1,6 +1,7 @@
 import { getProject } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
+import RightArrow from "../../../components/RightArrow";
 
 type Props = {
   params: { project: string };
@@ -12,16 +13,17 @@ const Project = async ({ params }: Props) => {
 
   return (
     <div>
-      <header className="flex items-center justify-between">
+      <header className="flex items-center justify-between mx-auto">
         <h1 className="bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent text-5xl font-extrabold drop-shadow">
           {project.name}
         </h1>
+        <RightArrow />
         <a
           href={project.url}
           title="View Project"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-sky-200 border border-gray-400 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-purple-500 hover:text-pink-100 transition"
+          className="bg-sky-200 border-2 border-gray-400 inset-2 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-purple-500 hover:text-pink-100 transition hover:border-gray-200 -mr-4 sm:-mr-8 lg:-mr-12"
         >
           View Project
         </a>

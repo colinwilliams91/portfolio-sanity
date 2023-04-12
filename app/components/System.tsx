@@ -31,7 +31,7 @@ const System = (page: Page) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setRepeatedElements(Array(20).fill(true));
-    }, 1000);
+    }, 1200);
 
     return () => clearInterval(interval);
   }, []);
@@ -46,7 +46,7 @@ const System = (page: Page) => {
         {page.system.map((el, i) => (
           <span
             key={i + Math.random()}
-            className="p-2 cursor-pointer hover:scale-110 transition"
+            className="p-2 hover:scale-110 transition"
           >
             {el}
           </span>
@@ -60,7 +60,7 @@ const System = (page: Page) => {
         {page.server.map((el, i) => (
           <span
             key={i + Math.random()}
-            className="p-2 cursor-pointer hover:scale-110 transition"
+            className="p-2 hover:scale-110 transition"
           >
             {el}
           </span>
@@ -74,7 +74,7 @@ const System = (page: Page) => {
         {page.database.map((el, i) => (
           <span
             key={i + Math.random()}
-            className="p-2 cursor-pointer hover:scale-110 transition"
+            className="p-2 hover:scale-110 transition"
           >
             {el}
           </span>
@@ -88,7 +88,7 @@ const System = (page: Page) => {
         {page.client.map((el, i) => (
           <span
             key={i + Math.random()}
-            className="p-2 cursor-pointer hover:scale-110 transition"
+            className="p-2 hover:scale-110 transition"
           >
             {el}
           </span>
@@ -102,7 +102,7 @@ const System = (page: Page) => {
         {page.styles.map((el, i) => (
           <span
             key={i + Math.random()}
-            className="p-2 cursor-pointer hover:scale-110 transition"
+            className="p-2 hover:scale-110 transition"
           >
             {el}
           </span>
@@ -116,7 +116,7 @@ const System = (page: Page) => {
         {page.audiovisual.map((el, i) => (
           <span
             key={i + Math.random()}
-            className="p-2 cursor-pointer hover:scale-110 transition"
+            className="p-2 hover:scale-110 transition"
           >
             {el}
           </span>
@@ -130,7 +130,7 @@ const System = (page: Page) => {
         {page.deployment.map((el, i) => (
           <span
             key={i + Math.random()}
-            className="p-2 cursor-pointer hover:scale-110 transition"
+            className="p-2 hover:scale-110 transition"
           >
             {el}
           </span>
@@ -144,7 +144,7 @@ const System = (page: Page) => {
         {page.management.map((el, i) => (
           <span
             key={i + Math.random()}
-            className="p-2 cursor-pointer hover:scale-110 transition"
+            className="p-2 hover:scale-110 transition"
           >
             {el}
           </span>
