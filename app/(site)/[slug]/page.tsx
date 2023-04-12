@@ -21,7 +21,7 @@ const Page = async ({ params }: Props) => {
       </h1>
       {/* HeadShot goes here */}
       {page.image && <Headshot {...page} />}
-      <div className="text-xl text-gray-300 mt-10 font-bold">
+      <div className="prose prose-strong:font-extrabold prose-strong:text-gray-300 prose-h3:text-gray-300 text-xl text-gray-400 mt-10 font-bold justify-center">
         <PortableText value={page.content} />
       </div>
       {page.linkedIn && (

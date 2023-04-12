@@ -12,21 +12,23 @@ const Project = async ({ params }: Props) => {
   const project = await getProject(slug);
 
   return (
-    <div>
+    <div id="outter-project-page">
       <header className="flex items-center justify-between mx-auto">
         <h1 className="bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent text-5xl font-extrabold drop-shadow">
           {project.name}
         </h1>
-        <RightArrow />
-        <a
-          href={project.url}
-          title="View Project"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-sky-200 border-2 border-gray-400 inset-2 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-purple-500 hover:text-pink-100 transition hover:border-gray-200 -mr-4 sm:-mr-8 lg:-mr-12"
-        >
-          View Project
-        </a>
+        <div id="arrow-button-container" className="flex items-center mr-12">
+          <RightArrow />
+          <a
+            href={project.url}
+            title="View Project"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gradient-to-br from-orange-400 to via-red-500 bg-purple-600 border-2 border-gray-400 inset-2 rounded-lg text-orange-100 font-bold py-3 px-4 whitespace-nowrap hover:bg-gradient-to-tl from-orange-400 to via-red-500 bg-purple-600 hover:text-cyan-300 transition duration-300 ease-in-out hover:border-gray-200 -mr-4 sm:-mr-8 lg:-mr-12"
+          >
+            View Project
+          </a>
+        </div>
       </header>
       {/* content goes here */}
       <div className="text-lg text-gray-300 mt-5">

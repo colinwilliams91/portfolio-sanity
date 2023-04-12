@@ -4,20 +4,20 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 const RightArrow = () => {
   return (
-    <span className="inline-block mr-2">
+    <span className="inline-block">
       <motion.div
         className="origin-center transform"
         animate={{
-          translateX: [0, 2, -2, 0],
+          translateX: [0, 3, -3, 0],
           transition: {
-            duration: 1,
+            duration: 0.5,
             repeat: 1000,
             repeatType: "loop",
             ease: "linear",
           },
         }}
       >
-        <FaLongArrowAltRight className="h-6 w-6 text-gray-300" />
+        <FaLongArrowAltRight className="h-7 w-7 text-gray-100 mr-2" />
       </motion.div>
     </span>
   );
