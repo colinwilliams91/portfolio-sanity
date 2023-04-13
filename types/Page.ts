@@ -7,10 +7,10 @@ export type Page = {
   slug: string;
   image: string;
   content: PortableTextBlock[];
-  linkedIn: PortableTextBlock[];
-  gmail: PortableTextBlock[];
-  github: PortableTextBlock[];
-  twitter: PortableTextBlock[];
+  linkedIn: string;
+  gmail: string;
+  github: string;
+  twitter: string;
   system: string[];
   server: string[];
   database: string[];

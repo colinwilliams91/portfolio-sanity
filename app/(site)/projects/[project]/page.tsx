@@ -47,7 +47,7 @@ const Project = async ({ params }: Props) => {
       <h2 className="text-lg flex justify-center mt-5 mx-auto text-gray-300">
         <b>Contributions</b>
       </h2>
-      <article className="prose prose-xl prose-strong:font-bold prose-strong:text-gray-400 text-gray-400 mt-3 mx-auto">
+      <article className="prose prose-xl prose-strong:font-bold prose-strong:text-gray-400 prose-a:text-gray-400 hover:prose-a:text-cyan-300 text-gray-400 mt-3 mx-auto">
         <PortableText value={project.contributions} />
       </article>
       {/* </div> */}

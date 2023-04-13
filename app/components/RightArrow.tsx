@@ -10,7 +10,7 @@ const RightArrow = () => {
         animate={{
           translateX: [0, 3, -3, 0],
           transition: {
-            duration: 0.5,
+            duration: 0.75,
             repeat: 1000,
             repeatType: "loop",
             ease: "linear",

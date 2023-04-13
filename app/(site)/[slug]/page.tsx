@@ -1,6 +1,5 @@
 import { getPage } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
-import Image from "next/image";
 
 import System from "../../../app/components/System";
 import Headshot from "../../../app/components/Headshot";
@@ -13,6 +12,7 @@ type Props = {
 
 const Page = async ({ params }: Props) => {
   const page = await getPage(params.slug);
+  console.log(page.linkedIn);
 
   return (
     <div>
@@ -21,33 +21,69 @@ const Page = async ({ params }: Props) => {
       </h1>
       {/* HeadShot goes here */}
       {page.image && <Headshot {...page} />}
-      <div className="prose prose-strong:font-extrabold prose-strong:text-gray-300 prose-h3:text-gray-300 text-xl text-gray-400 mt-10 font-bold justify-center">
+      <div
+        className={`prose prose-strong:font-extrabold prose-strong:text-gray-300 prose-h3:text-gray-300 text-xl text-gray-400 mt-10 font-bold justify-center ${
+          page.title === "Contact" ? "text-center" : ""
+        }`}
+      >
         <PortableText value={page.content} />
       </div>
       {page.linkedIn && (
-        <div className="flex items-center gap-2 w-5/12 text-lg text-gray-300 mt-10 hover:scale-105 transition">
-          <FaLinkedin /> :
-          <PortableText value={page.linkedIn} />
+        <div
+          id="square-container"
+          className="grid grid-cols-2 grid-rows-2 h-44 w-44 aspect-w-1 aspect-h-1 mx-auto"
+        >
+          {page.linkedIn && (
+            <div className="flex justify-center mt-10">
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href={page.linkedIn}
+                className="gap-2 text-gray-300 hover:scale-125 transition"
+              >
+                <FaLinkedin className="h-14 w-14" />
+              </a>
+            </div>
+          )}
+          {page.gmail && (
+            <div className="flex justify-center mt-10 ">
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href={page.gmail}
+                className="gap-2 text-gray-300 hover:scale-125 transition"
+              >
+                <FaEnvelope className="h-14 w-14" />
+              </a>
+            </div>
+          )}
+          {page.github && (
+            <div className="flex justify-center mt-10">
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href={page.github}
+                className="gap-2 text-lg hover:scale-125 transition"
+              >
+                <FaGithub className="h-14 w-14 text-gray-300" />
+              </a>
+            </div>
+          )}
+          {page.twitter && (
+            <div className="flex justify-center mt-10">
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href={page.twitter}
+                className="gap-2 text-lg hover:scale-125 transition"
+              >
+                <FaTwitter className="h-14 w-14 text-gray-300" />
+              </a>
+            </div>
+          )}
         </div>
       )}
-      {page.gmail && (
-        <div className="flex items-center gap-2 w-2/5 text-lg text-gray-300 mt-10 hover:scale-105 transition">
-          <FaEnvelope /> :
-          <PortableText value={page.gmail} />
-        </div>
-      )}
-      {page.github && (
-        <div className="flex items-center gap-2 w-1/3 text-lg text-gray-300 mt-10 hover:scale-105 transition">
-          <FaGithub /> :
-          <PortableText value={page.github} />
-        </div>
-      )}
-      {page.twitter && (
-        <div className="flex items-center gap-2 w-1/3 text-lg text-gray-300 mt-10 hover:scale-105 transition">
-          <FaTwitter /> :
-          <PortableText value={page.twitter} />
-        </div>
-      )}
+
       {page.system && <System {...page} />}
     </div>
   );

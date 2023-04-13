@@ -39,26 +39,22 @@ const page = {
     {
       name: "linkedIn",
       title: "LinkedIn",
-      type: "array",
-      of: [{ type: "block" }],
+      type: "string",
     },
     {
       name: "gmail",
       title: "Gmail",
-      type: "array",
-      of: [{ type: "block" }],
+      type: "string",
     },
     {
       name: "github",
       title: "Github",
-      type: "array",
-      of: [{ type: "block" }],
+      type: "string",
     },
     {
       name: "twitter",
       title: "Twitter",
-      type: "array",
-      of: [{ type: "block" }],
+      type: "string",
     },
     {
       name: "system",
