@@ -8,8 +8,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in the browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
 ## Techs Used
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
@@ -20,9 +18,12 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - GROQ - query runtime language with AI (for managing API data access/communication)
 - Sanity.io - cloud based content management system (for datasets)
 - TailwindCSS - in-line front end styling
+- Framer - fun animations
+- React Icons - simple UI icons
+- JSFXR - Sound synthesis and curation (coming soon...)
 
-## Deploy on Vercel
+## Deployed on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Seemless Integration and CD with Vercel with Next.js: [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[Next.js deployment documentation](https://nextjs.org/docs/deployment).
