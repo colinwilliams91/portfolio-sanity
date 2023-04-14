@@ -14,7 +14,7 @@ Open [http://localhost:3000](http://localhost:3000) in the browser.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 - NextJS - react framework, routing, data fetching and integrations
-- Vercel - deployment
+- Vercel - continuous deployment
 - GROQ - query runtime language with AI (for managing API data access/communication)
 - Sanity.io - cloud based content management system (for datasets)
 - TailwindCSS - in-line front end styling
