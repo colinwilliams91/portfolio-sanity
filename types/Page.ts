@@ -19,4 +19,5 @@ export type Page = {
   audiovisual: string[];
   deployment: string[];
   management: string[];
+  [key: string]: any;
 };

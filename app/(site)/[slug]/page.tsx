@@ -83,8 +83,14 @@ const Page = async ({ params }: Props) => {
           )}
         </div>
       )}
-
-      {page.system && <System {...page} />}
+      {page.system && <System page={page} item="system" />}
+      {page.server && <System page={page} item="server" />}
+      {page.database && <System page={page} item="database" />}
+      {page.client && <System page={page} item="client" />}
+      {page.styles && <System page={page} item="styles" />}
+      {page.audiovisual && <System page={page} item="audiovisual" />}
+      {page.deployment && <System page={page} item="deployment" />}
+      {page.management && <System page={page} item="management" />}
     </div>
   );
 };

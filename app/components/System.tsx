@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 // const trigrams = ["☰", "☱", "☲", "☳", "☴", "☵", "☶", "☷"];
 // const repeatedElements = Array(20).fill(true);
 
-const System = (page: Page) => {
+const System = ({ page, item }: { page: Page; item: string }) => {
   const [trigrams, setTrigrams] = useState([
     "☰",
     "☱",
@@ -41,9 +41,9 @@ const System = (page: Page) => {
       {/* <header className="mt-1">
         {repeatedElements.map(() => throwTrigram())}
       </header> */}
-      <h3 className="text-center font-semibold pb-1">SYSTEM</h3>
+      <h3 className="text-center font-semibold pb-1">{item.toUpperCase()}</h3>
       <div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center">
-        {page.system.map((el, i) => (
+        {page[item].map((el: string, i: number) => (
           <span
             key={i + Math.random()}
             className="p-2 hover:scale-110 transition"
@@ -52,106 +52,111 @@ const System = (page: Page) => {
           </span>
         ))}
       </div>
-      <header className="mt-1">
-        {repeatedElements.map(() => throwTrigram())}
-      </header>
-      <h3 className="text-center font-semibold pb-1">SERVER</h3>
-      <div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center">
-        {page.server.map((el, i) => (
-          <span
-            key={i + Math.random()}
-            className="p-2 hover:scale-110 transition"
-          >
-            {el}
-          </span>
-        ))}
-      </div>
-      <header className="mt-1">
-        {repeatedElements.map(() => throwTrigram())}
-      </header>
-      <h3 className="text-center font-semibold pb-1">DATABASE</h3>
-      <div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center">
-        {page.database.map((el, i) => (
-          <span
-            key={i + Math.random()}
-            className="p-2 hover:scale-110 transition"
-          >
-            {el}
-          </span>
-        ))}
-      </div>
-      <header className="mt-1">
-        {repeatedElements.map(() => throwTrigram())}
-      </header>
-      <h3 className="text-center font-semibold pb-1">CLIENT</h3>
-      <div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center">
-        {page.client.map((el, i) => (
-          <span
-            key={i + Math.random()}
-            className="p-2 hover:scale-110 transition"
-          >
-            {el}
-          </span>
-        ))}
-      </div>
-      <header className="mt-1">
-        {repeatedElements.map(() => throwTrigram())}
-      </header>
-      <h3 className="text-center font-semibold pb-1">STYLES</h3>
-      <div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center">
-        {page.styles.map((el, i) => (
-          <span
-            key={i + Math.random()}
-            className="p-2 hover:scale-110 transition"
-          >
-            {el}
-          </span>
-        ))}
-      </div>
-      <header className="mt-1">
-        {repeatedElements.map(() => throwTrigram())}
-      </header>
-      <h3 className="text-center font-semibold pb-1">AUDIOVISUAL</h3>
-      <div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center">
-        {page.audiovisual.map((el, i) => (
-          <span
-            key={i + Math.random()}
-            className="p-2 hover:scale-110 transition"
-          >
-            {el}
-          </span>
-        ))}
-      </div>
-      <header className="mt-1">
-        {repeatedElements.map(() => throwTrigram())}
-      </header>
-      <h3 className="text-center font-semibold pb-1">DEPLOYMENT</h3>
-      <div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center">
-        {page.deployment.map((el, i) => (
-          <span
-            key={i + Math.random()}
-            className="p-2 hover:scale-110 transition"
-          >
-            {el}
-          </span>
-        ))}
-      </div>
-      <header className="mt-1">
-        {repeatedElements.map(() => throwTrigram())}
-      </header>
-      <h3 className="text-center font-semibold pb-1">MANAGEMENT</h3>
-      <div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center">
-        {page.management.map((el, i) => (
-          <span
-            key={i + Math.random()}
-            className="p-2 hover:scale-110 transition"
-          >
-            {el}
-          </span>
-        ))}
-      </div>
+      {item !== "management" && (
+        <header className="mt-1">
+          {repeatedElements.map(() => throwTrigram())}
+        </header>
+      )}
     </>
   );
 };
 
 export default System;
+
+{
+  /* <h3 className="text-center font-semibold pb-1">SERVER</h3>
+<div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center">
+  {page.server.map((el, i) => (
+    <span
+      key={i + Math.random()}
+      className="p-2 hover:scale-110 transition"
+    >
+      {el}
+    </span>
+  ))}
+</div>
+<header className="mt-1">
+  {repeatedElements.map(() => throwTrigram())}
+</header>
+<h3 className="text-center font-semibold pb-1">DATABASE</h3>
+<div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center">
+  {page.database.map((el, i) => (
+    <span
+      key={i + Math.random()}
+      className="p-2 hover:scale-110 transition"
+    >
+      {el}
+    </span>
+  ))}
+</div>
+<header className="mt-1">
+  {repeatedElements.map(() => throwTrigram())}
+</header>
+<h3 className="text-center font-semibold pb-1">CLIENT</h3>
+<div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center">
+  {page.client.map((el, i) => (
+    <span
+      key={i + Math.random()}
+      className="p-2 hover:scale-110 transition"
+    >
+      {el}
+    </span>
+  ))}
+</div>
+<header className="mt-1">
+  {repeatedElements.map(() => throwTrigram())}
+</header>
+<h3 className="text-center font-semibold pb-1">STYLES</h3>
+<div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center">
+  {page.styles.map((el, i) => (
+    <span
+      key={i + Math.random()}
+      className="p-2 hover:scale-110 transition"
+    >
+      {el}
+    </span>
+  ))}
+</div>
+<header className="mt-1">
+  {repeatedElements.map(() => throwTrigram())}
+</header>
+<h3 className="text-center font-semibold pb-1">AUDIOVISUAL</h3>
+<div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center">
+  {page.audiovisual.map((el, i) => (
+    <span
+      key={i + Math.random()}
+      className="p-2 hover:scale-110 transition"
+    >
+      {el}
+    </span>
+  ))}
+</div>
+<header className="mt-1">
+  {repeatedElements.map(() => throwTrigram())}
+</header>
+<h3 className="text-center font-semibold pb-1">DEPLOYMENT</h3>
+<div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center">
+  {page.deployment.map((el, i) => (
+    <span
+      key={i + Math.random()}
+      className="p-2 hover:scale-110 transition"
+    >
+      {el}
+    </span>
+  ))}
+</div>
+<header className="mt-1">
+  {repeatedElements.map(() => throwTrigram())}
+</header>
+<h3 className="text-center font-semibold pb-1">MANAGEMENT</h3>
+<div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center">
+  {page.management.map((el, i) => (
+    <span
+      key={i + Math.random()}
+      className="p-2 hover:scale-110 transition"
+    >
+      {el}
+    </span>
+  ))}
+</div> */
+}
