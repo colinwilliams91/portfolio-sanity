@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { FaLongArrowAltRight } from "react-icons/fa";
+import { BsArrowRight } from "react-icons/bs";
 
 const RightArrow = () => {
   return (
@@ -17,7 +17,7 @@ const RightArrow = () => {
           },
         }}
       >
-        <FaLongArrowAltRight className="h-7 w-7 text-gray-100 mr-2" />
+        <BsArrowRight className="h-7 w-8 text-gray-100 mr-2" />
       </motion.div>
     </span>
   );
