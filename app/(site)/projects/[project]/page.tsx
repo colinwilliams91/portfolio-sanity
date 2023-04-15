@@ -41,8 +41,6 @@ const Project = async ({ params }: Props) => {
         width={1920}
         height={1080}
         className="mt-5 border-2 border-gray-400 object-cover rounded-xl"
-        unoptimized={true}
-        allow-scripts={true}
       />
       {/* contributions go here */}
       {/* <div className="flex"> */}
