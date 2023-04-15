@@ -22,12 +22,12 @@ const Home = async () => {
       <p className="mt-3 text-xl text-gray-300 font-bold">
         Thanks for visiting my portfolio site!
       </p>
-      <p className="mt-20 text-xl text-gray-300 font-bold">My Projects</p>
+      <p className="mt-20 text-xl text-gray-100 font-bold">My Projects</p>
       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
           <Link
             href={`/projects/${project.slug}`}
-            className="border-2 border-gray-300 rounded-lg p-1 hover:scale-105 hover:border-cyan-300 transition"
+            className="border-2 border-gray-300 rounded-lg p-1 hover:scale-105 hover:border-cyan-400/75 transition"
             key={project._id}
           >
             {project.image && (

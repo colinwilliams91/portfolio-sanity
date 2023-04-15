@@ -38,12 +38,14 @@ const System = ({ page, item }: { page: Page; item: string }) => {
 
   return (
     <>
-      <h3 className="text-center font-semibold pb-1">{item.toUpperCase()}</h3>
-      <div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center">
+      <h3 className="text-xl text-center font-semibold pb-1">
+        {item.toUpperCase()}
+      </h3>
+      <div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center hover:border-cyan-300/75 transition">
         {page[item].map((el: string, i: number) => (
           <span
             key={i + Math.random()}
-            className="p-2 hover:scale-110 transition"
+            className="p-2 hover:scale-110 transition first:bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent last:bg-gradient-to-l from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent"
           >
             {el}
           </span>

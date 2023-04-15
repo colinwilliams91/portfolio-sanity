@@ -24,7 +24,7 @@ const Project = async ({ params }: Props) => {
             title="View Project"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-br from-orange-400 to via-red-500 bg-purple-600 border-2 border-gray-400 inset-2 rounded-lg text-orange-100 font-bold py-3 px-4 whitespace-nowrap hover:bg-gradient-to-tl from-orange-400 to via-red-500 bg-purple-600 hover:text-cyan-300 transition duration-300 ease-in-out hover:border-gray-200 -mr-4 sm:-mr-8 lg:-mr-12"
+            className="bg-gradient-to-br from-orange-400 to via-red-500 bg-purple-600 border-2 border-gray-400 inset-2 rounded-lg text-orange-100 font-bold py-3 px-4 whitespace-nowrap hover:bg-gradient-to-tl from-orange-400 to via-red-500 bg-purple-600 hover:text-cyan-400 transition duration-300 ease-in-out hover:border-gray-200 -mr-4 sm:-mr-8 lg:-mr-12"
           >
             View Project
           </a>
