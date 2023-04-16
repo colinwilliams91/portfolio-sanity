@@ -29,9 +29,10 @@ const Page = async ({ params }: Props) => {
         <PortableText value={page.content} />
       </div>
       {page.linkedIn && (
+        // <div className="flex justify-center mx-auto mt-7 h-60 w-60 aspect-w-1 aspect-h-1 border border-gray-300/50 rounded-2xl">
         <div
           id="square-container"
-          className="grid grid-cols-2 grid-rows-2 h-44 w-44 aspect-w-1 aspect-h-1 mx-auto"
+          className="grid grid-cols-2 grid-rows-2 h-52 w-52 aspect-w-1 aspect-h-1 mx-auto mt-2 items-center"
         >
           {page.linkedIn && (
             <div className="flex justify-center mt-10">
@@ -39,9 +40,9 @@ const Page = async ({ params }: Props) => {
                 rel="noopener noreferrer"
                 target="_blank"
                 href={page.linkedIn}
-                className="gap-2 text-gray-300 hover:scale-125 transition"
+                className=" text-gray-300 hover:scale-125 transition"
               >
-                <FaLinkedin className="h-14 w-14" />
+                <FaLinkedin className="h-28 w-28 p-4" />
               </a>
             </div>
           )}
@@ -51,9 +52,9 @@ const Page = async ({ params }: Props) => {
                 rel="noopener noreferrer"
                 target="_blank"
                 href={page.gmail}
-                className="gap-2 text-gray-300 hover:scale-125 transition"
+                className=" text-gray-300 hover:scale-125 transition"
               >
-                <FaEnvelope className="h-14 w-14" />
+                <FaEnvelope className="h-28 w-28 p-4" />
               </a>
             </div>
           )}
@@ -63,9 +64,9 @@ const Page = async ({ params }: Props) => {
                 rel="noopener noreferrer"
                 target="_blank"
                 href={page.github}
-                className="gap-2 text-lg hover:scale-125 transition"
+                className="text-lg hover:scale-125 transition"
               >
-                <FaGithub className="h-14 w-14 text-gray-300" />
+                <FaGithub className="h-28 w-28 text-gray-300 p-4" />
               </a>
             </div>
           )}
@@ -75,13 +76,14 @@ const Page = async ({ params }: Props) => {
                 rel="noopener noreferrer"
                 target="_blank"
                 href={page.twitter}
-                className="gap-2 text-lg hover:scale-125 transition"
+                className="text-lg hover:scale-125 transition"
               >
-                <FaTwitter className="h-14 w-14 text-gray-300" />
+                <FaTwitter className="h-28 w-28 text-gray-300 p-4" />
               </a>
             </div>
           )}
         </div>
+        // </div>
       )}
       {page.system && <System page={page} item="system" />}
       {page.server && <System page={page} item="server" />}
