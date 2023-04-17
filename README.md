@@ -6,6 +6,8 @@ Run the development server:
 npm run dev
 ```
 
+localhost:3000/admin - to manage studio datasets
+
 Open [http://localhost:3000](http://localhost:3000) in the browser.
 
 ## Techs Used
