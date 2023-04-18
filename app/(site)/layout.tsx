@@ -1,7 +1,7 @@
 import Link from "next/link";
 import "../globals.css";
 import { getPages } from "@/sanity/sanity-utils";
-
+/* べ */
 export const metadata = {
   title: "Colin Williams Dev",
   description: "Live Portfolio Application",
@@ -39,6 +39,9 @@ export default async function RootLayout({
           </div>
         </header>
         <main className="py-10">{children}</main>
+        <div className="relative text-xs text-center mt-8">
+          ┄ COPYRIGHT © 2023 C B WILLIAMS ┄
+        </div>
       </body>
     </html>
   );
