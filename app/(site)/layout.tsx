@@ -1,23 +1,37 @@
+"use client";
+
 import Link from "next/link";
 import "../globals.css";
-import { getPages } from "@/sanity/sanity-utils";
-/* べ */
-export const metadata = {
-  title: "Colin Williams Dev",
-  description: "Live Portfolio Application",
-};
 
-export default async function RootLayout({
+import { useEffect, useRef, useState } from "react";
+import { getPages } from "@/sanity/sanity-utils";
+
+import Background from "../components/Background";
+/* べ */
+// export const metadata = {
+//   title: "Colin Williams Dev",
+//   description: "Live Portfolio Application",
+// };
+
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  // get all of my pages
-  const pages = await getPages();
+  const [pages, setPages] = useState([]);
+
+  useEffect(() => {
+    getPages()
+      .then((data) => setPages(data as any))
+      .catch((err) => console.error("failed fetching pages", err));
+  }, []);
 
   return (
     <html lang="en">
       <body className="max-w-3xl mx-auto py-20">
+        <div className=" h-full w-full overflow-hidden">
+          <Background />
+        </div>
         <header className="flex items-center justify-between">
           <Link
             href="/"
@@ -27,7 +41,7 @@ export default async function RootLayout({
           </Link>
 
           <div className="flex items-center gap-4 text-sm text-gray-400">
-            {pages.map((page) => (
+            {pages.map((page: any) => (
               <Link
                 key={page._id}
                 href={`/${page.slug}`}
