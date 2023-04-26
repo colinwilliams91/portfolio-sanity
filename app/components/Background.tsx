@@ -53,12 +53,36 @@ const Background: React.FC = () => {
       <main
         ref={vantaRef}
         id="vanta-canvas"
-        className="block absolute -z-20 top-0 left-0 w-full h-[1622px] overflow-hidden"
+        className="block absolute -z-20 top-0 left-0 w-full h-[1624px] overflow-hidden"
       ></main>
       <main
         id="blur-box"
-        className="block absolute -z-20 top-0 left-0 w-full h-[1622px] backdrop-blur-[3px] overflow-hidden"
+        className="block absolute -z-20 top-0 left-0 w-full h-[1624px] backdrop-blur-[3px] overflow-hidden"
       ></main>
+      <style>
+        {`
+      ::-webkit-scrollbar {
+        width: 0.5em;
+        height: 0.5em;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 0.5em;
+      }
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0,0,0,0.5) transparent;
+      }
+      *::-webkit-scrollbar {
+        width: 0.5em;
+        height: 0.5em;
+      }
+      *::-webkit-scrollbar-thumb {
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 0.5em;
+      }
+    `}
+      </style>
       {/* // </div> */}
     </>
   );
