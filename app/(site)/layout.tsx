@@ -40,7 +40,7 @@ export default function RootLayout({
             Portfolio
           </Link>
 
-          <div className="flex items-center gap-4 text-sm text-gray-200">
+          <div className="flex items-center gap-4 text-sm text-gray-100">
             {pages.map((page: any) => (
               <Link
                 key={page._id}
