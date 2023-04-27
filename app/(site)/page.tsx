@@ -19,7 +19,7 @@ const Home = async () => {
           Colin!
         </span>
       </h1>
-      <p className="mt-3 text-xl text-gray-300 font-bold">
+      <p className="mt-3 text-xl text-gray-200 font-bold">
         Thanks for visiting my portfolio site!
       </p>
       <p className="mt-20 text-xl text-gray-100 font-bold">My Projects</p>
@@ -27,7 +27,7 @@ const Home = async () => {
         {projects.map((project) => (
           <Link
             href={`/projects/${project.slug}`}
-            className="border-2 border-gray-300 rounded-lg p-1 hover:scale-105 hover:border-cyan-400/75 transition"
+            className="border-2 border-gray-300 rounded-lg p-1 hover:scale-105 hover:border-cyan-400 transition"
             key={project._id}
           >
             {project.image && (

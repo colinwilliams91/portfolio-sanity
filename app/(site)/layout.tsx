@@ -35,17 +35,17 @@ export default function RootLayout({
         <header className="flex items-center justify-between">
           <Link
             href="/"
-            className="bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent text-lg font-bold"
+            className="bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-500 bg-clip-text text-transparent text-lg font-bold hover:scale-125 hover:bg-gradient-to-l hover:from-purple-500 to hover:bg-cyan-300 transition"
           >
             Portfolio
           </Link>
 
-          <div className="flex items-center gap-4 text-sm text-gray-400">
+          <div className="flex items-center gap-4 text-sm text-gray-200">
             {pages.map((page: any) => (
               <Link
                 key={page._id}
                 href={`/${page.slug}`}
-                className="hover:underline"
+                className="hover:underline hover:scale-105 hover:text-cyan-300"
               >
                 {page.title}
               </Link>
