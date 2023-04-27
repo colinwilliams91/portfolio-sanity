@@ -41,7 +41,7 @@ const System = ({ page, item }: { page: Page; item: string }) => {
       <h3 className="text-xl text-center font-semibold pb-1">
         {item.toUpperCase()}
       </h3>
-      <div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center hover:border-cyan-300/75 transition">
+      <div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center backdrop-blur-[2px] hover:border-cyan-300/75 transition">
         {page[item].map((el: string, i: number) => (
           <span
             key={i + Math.random()}
