@@ -6,6 +6,7 @@ import * as THREE from "three";
 const Background: React.FC = () => {
   const [vantaEffect, setVantaEffect] = useState(0);
   const vantaRef = useRef(null);
+
   useEffect(() => {
     // <-- how to attach script to <head> with Next.js / React
     const threeScript = document.createElement("script");
@@ -14,6 +15,7 @@ const Background: React.FC = () => {
       "src",
       "https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
     );
+
     document.getElementsByTagName("head")[0].appendChild(threeScript);
     return () => {
       if (threeScript) {
