@@ -22,11 +22,11 @@ const Page = async ({ params }: Props) => {
       {/* HeadShot goes here */}
       {page.image && <Headshot {...page} />}
       <div
-        className={`prose prose-li:drop-shadow-4xl prose-strong:font-extrabold prose-strong:text-gray-300 prose-h3:text-gray-300 text-xl text-gray-400 mt-10 font-bold justify-center ${
+        className={`prose prose-li:drop-shadow-4xl prose-strong:font-extrabold prose-strong:text-gray-200 prose-h3:text-gray-300 text-xl text-gray-400 mt-10 font-bold justify-center ${
           page.title === "Contact" ? "text-center" : ""
         }`}
       >
-        <div>
+        <div className="text-gray-200">
           <PortableText value={page.content} />
         </div>
       </div>

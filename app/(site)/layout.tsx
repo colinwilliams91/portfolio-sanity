@@ -28,7 +28,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className="max-w-3xl mx-auto py-20">
+      <body className="max-w-3xl mx-auto pt-20">
         <div className=" h-full w-full overflow-hidden">
           <Background />
         </div>

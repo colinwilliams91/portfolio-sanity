@@ -19,7 +19,7 @@ const Home = async () => {
           Colin!
         </span>
       </h1>
-      <p className="mt-3 text-xl text-slate-300 font-bold">
+      <p className="mt-3 text-xl text-gray-100 font-bold">
         Thanks for visiting my portfolio site!
       </p>
       <p className="mt-20 text-xl text-gray-100 font-bold">べ My Projects</p>
