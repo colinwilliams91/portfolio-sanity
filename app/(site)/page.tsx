@@ -15,16 +15,16 @@ const Home = async () => {
 
   return (
     <div>
-      <h1 className="text-7xl font-bold">
+      <h1 className="text-7xl font-thin mt-12">
         Hello I&apos;m{" "}
-        <span className="bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent">
+        <span className="font-thin bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent">
           C o l i n !
         </span>
       </h1>
       {/* <p className="mt-3 text-xl text-gray-100">
         Thanks for visiting my portfolio site!
       </p> */}
-      <p className="flex justify-center mt-10 text-xl text-gray-100">
+      <p className="flex justify-center mt-24 text-xl text-gray-100">
         べ &nbsp; P r o j e c t s べ
       </p>
       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -49,9 +49,9 @@ const Home = async () => {
           </Link>
         ))}
       </div>
-      <div className="flex justify-center">
+      {/* <div className="flex justify-center">
         <HomeHeadshot />
-      </div>
+      </div> */}
     </div>
   );
 };
