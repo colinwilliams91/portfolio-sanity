@@ -26,7 +26,9 @@ const Page = async ({ params }: Props) => {
           page.title === "Contact" ? "text-center" : ""
         }`}
       >
-        <PortableText value={page.content} />
+        <div>
+          <PortableText value={page.content} />
+        </div>
       </div>
       {page.linkedIn && (
         // <div className="flex justify-center mx-auto mt-7 h-60 w-60 aspect-w-1 aspect-h-1 border border-gray-300/50 rounded-2xl">
@@ -40,7 +42,7 @@ const Page = async ({ params }: Props) => {
                 rel="noopener noreferrer"
                 target="_blank"
                 href={page.linkedIn}
-                className=" text-gray-300 hover:scale-125 transition"
+                className=" text-gray-200 hover:scale-125 transition"
               >
                 <FaLinkedin className="h-28 w-28 p-4" />
               </a>
@@ -52,7 +54,7 @@ const Page = async ({ params }: Props) => {
                 rel="noopener noreferrer"
                 target="_blank"
                 href={page.gmail}
-                className=" text-gray-300 hover:scale-125 transition"
+                className=" text-gray-200 hover:scale-125 transition"
               >
                 <FaEnvelope className="h-28 w-28 p-4" />
               </a>
@@ -66,7 +68,7 @@ const Page = async ({ params }: Props) => {
                 href={page.github}
                 className="text-lg hover:scale-125 transition"
               >
-                <FaGithub className="h-28 w-28 text-gray-300 p-4" />
+                <FaGithub className="h-28 w-28 text-gray-200 p-4" />
               </a>
             </div>
           )}
@@ -78,7 +80,7 @@ const Page = async ({ params }: Props) => {
                 href={page.twitter}
                 className="text-lg hover:scale-125 transition"
               >
-                <FaTwitter className="h-28 w-28 text-gray-300 p-4" />
+                <FaTwitter className="h-28 w-28 text-gray-200 p-4" />
               </a>
             </div>
           )}

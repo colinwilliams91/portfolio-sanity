@@ -27,7 +27,7 @@ const Home = async () => {
         {projects.map((project) => (
           <Link
             href={`/projects/${project.slug}`}
-            className="bg-cyan-300/[17%] border-2 border-gray-300 rounded-lg p-1 hover:scale-105 hover:border-cyan-400 transition"
+            className="rounded-xl bg-orange-400/[17%] border-2 border-gray-300 p-1 hover:scale-110 hover:border-cyan-400 transition"
             key={project._id}
           >
             {project.image && (
@@ -36,7 +36,7 @@ const Home = async () => {
                 alt={project.name}
                 width={750} // 250
                 height={300} // 100
-                className="object-cover rounded-lg border border-violet-300" // border-gray-500
+                className="object-cover rounded-xl border border-violet-300 transition-shadow" // border-gray-500 // hover:drop-shadow-4xl
               />
             )}
             <div className="mt-2 font-extrabold bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent">
