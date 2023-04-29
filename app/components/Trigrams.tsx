@@ -18,7 +18,7 @@ const Trigrams = () => {
 
   const throwTrigram = () => {
     return (
-      <span className="m-3">
+      <span className="m-3" key={Math.random() * 100}>
         {trigrams[Math.floor(Math.random() * trigrams.length)]}
       </span>
     );
