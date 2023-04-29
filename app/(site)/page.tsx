@@ -3,6 +3,8 @@ import { getProjects } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
 
+import HomeHeadshot from "../components/HomeHeadshot";
+
 // const inter = Inter({ subsets: ["latin"] });
 {
   /* <p className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}> */
@@ -13,21 +15,23 @@ const Home = async () => {
 
   return (
     <div>
-      <h1 className="text-7xl font-extrabold">
+      <h1 className="text-7xl font-bold">
         Hello I&apos;m{" "}
         <span className="bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent">
-          Colin!
+          C o l i n !
         </span>
       </h1>
-      <p className="mt-3 text-xl text-gray-100 font-bold">
+      {/* <p className="mt-3 text-xl text-gray-100">
         Thanks for visiting my portfolio site!
+      </p> */}
+      <p className="flex justify-center mt-10 text-xl text-gray-100">
+        べ &nbsp; P r o j e c t s べ
       </p>
-      <p className="mt-20 text-xl text-gray-100 font-bold">べ My Projects</p>
       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
           <Link
             href={`/projects/${project.slug}`}
-            className="rounded-xl bg-orange-400/[17%] border-2 border-gray-300 p-1 hover:scale-110 hover:border-cyan-400 transition"
+            className="rounded-xl bg-orange-400/[17%] border-[4px] border-double border-gray-200/50 p-1 hover:scale-110 hover:border-cyan-400 transition"
             key={project._id}
           >
             {project.image && (
@@ -44,6 +48,9 @@ const Home = async () => {
             </div>
           </Link>
         ))}
+      </div>
+      <div className="flex justify-center">
+        <HomeHeadshot />
       </div>
     </div>
   );
