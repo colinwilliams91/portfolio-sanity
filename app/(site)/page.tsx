@@ -25,7 +25,7 @@ const Home = async () => {
         Thanks for visiting my portfolio site!
       </p> */}
       <p className="flex justify-center mt-24 text-xl text-gray-100">
-        べ &nbsp; P r o j e c t s べ
+        べ &nbsp; P r o j e c t s &nbsp; べ
       </p>
       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
