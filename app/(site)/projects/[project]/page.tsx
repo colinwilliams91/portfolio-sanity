@@ -14,7 +14,7 @@ const Project = async ({ params }: Props) => {
   return (
     <div id="outter-project-page">
       <header className="flex items-center justify-between mx-auto">
-        <h1 className="bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent text-5xl font-extrabold drop-shadow">
+        <h1 className=" align-middle h-auto bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent text-5xl font-extrabold drop-shadow">
           {project.name}
         </h1>
         <div id="arrow-button-container" className="flex items-center mr-12">
