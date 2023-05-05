@@ -33,7 +33,7 @@ const L: any = ({ el }: LetterProps) => {
         boxShadow: "0px 1px 2px 0px",
       }}
       whileHover={{ scale: 1.2 }}
-      whileTap={{ scale: 0.9 }}
+      whileTap={{ scale: 0.9, color: "cyan" }}
       transition={{ type: "spring", stiffness: 666, damping: 6 }}
     >
       &nbsp;{el}&nbsp;
