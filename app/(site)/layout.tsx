@@ -36,18 +36,23 @@ export default function RootLayout({
           <Background />
         </div>
         <header className="flex items-center justify-between">
-          <Link
-            href="/"
-            className="bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-500 bg-clip-text text-transparent text-lg font-bold hover:scale-125 hover:bg-gradient-to-l hover:from-purple-500 to hover:bg-cyan-300 transition"
+          <motion.span
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 13 }}
           >
-            Portfolio
-          </Link>
-
+            <Link
+              href="/"
+              className="bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-500 bg-clip-text text-transparent text-lg font-bold hover:scale-125 hover:bg-gradient-to-l hover:from-purple-500 to hover:bg-cyan-300 transition"
+            >
+              Portfolio
+            </Link>
+          </motion.span>
           <div className="flex items-center gap-4 text-sm text-gray-100">
             {pages.map((page: any) => (
               <motion.span
                 whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
+                whileTap={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 13 }}
                 key={page._id}
               >
