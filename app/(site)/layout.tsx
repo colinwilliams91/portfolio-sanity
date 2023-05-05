@@ -7,6 +7,9 @@ import { useEffect, useRef, useState } from "react";
 import { getPages } from "@/sanity/sanity-utils";
 
 import Background from "../components/Background";
+import ParallaxBanner from "../components/ParallaxBanner";
+import { motion } from "framer-motion";
+
 /* べ */
 // export const metadata = {
 //   title: "Colin Williams Dev",
@@ -42,13 +45,19 @@ export default function RootLayout({
 
           <div className="flex items-center gap-4 text-sm text-gray-100">
             {pages.map((page: any) => (
-              <Link
+              <motion.span
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 13 }}
                 key={page._id}
-                href={`/${page.slug}`}
-                className="hover:underline hover:scale-105 hover:text-cyan-300"
               >
-                {page.title}
-              </Link>
+                <Link
+                  href={`/${page.slug}`}
+                  className="hover:underline hover:text-cyan-300"
+                >
+                  {page.title}
+                </Link>
+              </motion.span>
             ))}
           </div>
         </header>
@@ -56,6 +65,7 @@ export default function RootLayout({
         <div className="relative text-xs text-center mt-8">
           ┄ COPYRIGHT © 2023 C B WILLIAMS ┄
         </div>
+        {/* <ParallaxBanner /> */}
       </body>
     </html>
   );

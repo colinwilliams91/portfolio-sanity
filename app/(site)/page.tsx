@@ -18,7 +18,7 @@ const Home = async () => {
       <h1 className="font-extralight text-7xl mt-12">
         Hello I&apos;m{" "}
         <span className=" font-bold bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent">
-          C o l i n !
+          Colin!
         </span>
       </h1>
       {/* <p className="mt-3 text-xl text-gray-100">
