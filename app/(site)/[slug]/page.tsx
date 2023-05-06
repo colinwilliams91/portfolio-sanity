@@ -42,7 +42,7 @@ const Page = async ({ params }: Props) => {
                 rel="noopener noreferrer"
                 target="_blank"
                 href={page.linkedIn}
-                className=" text-gray-200 hover:scale-125 transition"
+                className="text-gray-200 hover:rounded-lg hover:scale-125 hover:text-purple-300 transition"
               >
                 <FaLinkedin className="h-28 w-28 p-4" />
               </a>
@@ -54,7 +54,7 @@ const Page = async ({ params }: Props) => {
                 rel="noopener noreferrer"
                 target="_blank"
                 href={page.gmail}
-                className=" text-gray-200 hover:scale-125 transition"
+                className="text-gray-200 hover:rounded-lg hover:scale-125 hover:text-cyan-300 transition"
               >
                 <FaEnvelope className="h-28 w-28 p-4" />
               </a>
