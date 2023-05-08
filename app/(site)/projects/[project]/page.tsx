@@ -40,7 +40,7 @@ const Project = async ({ params }: Props) => {
         alt={project.name}
         width={1920}
         height={1080}
-        className="mt-5 border-2 border-gray-400 object-cover rounded-xl"
+        className="mt-5 border-[4px] border-double border-violet-300/90 object-cover rounded-xl"
       />
       {/* contributions go here */}
       {/* <div className="flex"> */}
