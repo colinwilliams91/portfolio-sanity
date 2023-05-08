@@ -17,7 +17,7 @@ const Home = async () => {
 
   return (
     <div>
-      <h1 className="font-light text-7xl mt-12">
+      <h1 className="font-light text-gray-50 text-7xl mt-12">
         Hello I&apos;m{" "}
         <span className="font-bold bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent">
           Colin!

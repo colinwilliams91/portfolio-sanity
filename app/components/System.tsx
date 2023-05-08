@@ -6,7 +6,7 @@ import Trigrams from "./Trigrams";
 const System = ({ page, item }: { page: Page; item: string }) => {
   return (
     <>
-      <h3 className="text-xl text-center font-semibold pb-1">
+      <h3 className="text-xl text-center text-gray-50 font-semibold pb-1">
         {item.toUpperCase()}
       </h3>
       <div className="text-2xl text-center border pb-1 px-1 rounded-2xl flex flex-row justify-center backdrop-blur hover:scale-105 hover:border-cyan-300 transition">
