@@ -1,10 +1,10 @@
 "use client";
-import React from "react";
+import React, { FC } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Page } from "@/types/Page";
 import Image from "next/image";
 
-const Headshot = (page: Page) => {
+const Headshot: FC<Page> = (page: Page) => {
   return (
     <div className="flex justify-center">
       <AnimatePresence>

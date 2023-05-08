@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import HomeHeadshot from "../components/HomeHeadshot";
+import ProjectCard from "../components/ProjectCard";
 import L from "../components/Letters";
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -27,7 +28,7 @@ const Home = async () => {
       </p>
       <p className="flex justify-center mt-16 mb-8 text-xl text-gray-100">
         {" "}
-        -- &nbsp;
+        <span className="text-gray-400">--</span> &nbsp;
         <L el={"べ"} />
         <L el={"P"} />
         <L el={"r"} />
@@ -38,28 +39,11 @@ const Home = async () => {
         <L el={"t"} />
         <L el={"s"} />
         <L el={"べ"} />
-        &nbsp; --
+        &nbsp; <span className="text-gray-400">--</span>
       </p>
       <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
-          <Link
-            href={`/projects/${project.slug}`}
-            className="rounded-xl bg-orange-400/[17%] border-[4px] border-double border-gray-200/50 p-1 hover:scale-110 hover:border-cyan-400 transition"
-            key={project._id}
-          >
-            {project.image && (
-              <Image
-                src={project.image}
-                alt={project.name}
-                width={750} // 250
-                height={300} // 100
-                className="object-cover rounded-xl border border-violet-300 transition-shadow" // border-gray-500 // hover:drop-shadow-4xl
-              />
-            )}
-            <div className="mt-2 font-extrabold bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent">
-              {project.name}
-            </div>
-          </Link>
+          <ProjectCard key={project._id} {...project} />
         ))}
       </div>
       {/* <div className="flex justify-center">
