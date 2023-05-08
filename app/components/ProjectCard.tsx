@@ -19,7 +19,7 @@ const ProjectCard: FC<Project> = (project: Project) => {
         className="rounded-xl p-1 bg-orange-400/[17%]
         border-[3px] border-double border-violet-400
         hover:border-cyan-400 hover:bg-gradient-to-tr
-        from-pink-500/40 to-cyan-400/25 transition"
+        from-pink-500/40 to-cyan-300/30 transition"
         key={project._id}
       >
         {project.image && (
