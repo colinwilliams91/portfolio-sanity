@@ -16,7 +16,10 @@ const ProjectCard: FC<Project> = (project: Project) => {
     >
       <Link
         href={`/projects/${project.slug}`}
-        className="rounded-xl bg-orange-400/[17%] border-[4px] border-double border-gray-200/50 hover:border-cyan-400 p-1 transition"
+        className="rounded-xl p-1 bg-orange-400/[17%]
+        border-[3px] border-double border-violet-400
+        hover:border-cyan-400 hover:bg-gradient-to-tr
+        from-pink-500/40 to-cyan-400/25 transition"
         key={project._id}
       >
         {project.image && (
@@ -25,10 +28,15 @@ const ProjectCard: FC<Project> = (project: Project) => {
             alt={project.name}
             width={750} // 250
             height={300} // 100
-            className="object-cover rounded-xl border border-violet-300 transition-shadow" // border-gray-500 // hover:drop-shadow-4xl
+            className="object-cover rounded-xl border
+            border-violet-300 transition-shadow" // border-gray-500 // hover:drop-shadow-4xl
           />
         )}
-        <div className="mt-2 font-extrabold bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent">
+        <div
+          className="mt-2 font-extrabold
+        bg-gradient-to-r from-orange-400 to via-red-500
+        bg-purple-600 bg-clip-text text-transparent"
+        >
           {project.name}
         </div>
       </Link>
