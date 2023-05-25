@@ -39,7 +39,7 @@ const Background: React.FC = () => {
           scaleMobile: 1.0,
           color: 0xff3fff,
           color2: 0x870ff2,
-          size: 1.5,
+          size: 1.4,
           backgroundColor: 0x15082f,
         })
       );
