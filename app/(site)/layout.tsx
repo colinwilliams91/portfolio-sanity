@@ -40,6 +40,7 @@ export default function RootLayout({
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 1 }}
             transition={{ type: "spring", stiffness: 400, damping: 13 }}
+            tabIndex={-1}
           >
             <Link
               href="/"
@@ -55,6 +56,7 @@ export default function RootLayout({
                 whileTap={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 13 }}
                 key={page._id}
+                tabIndex={-1}
               >
                 <Link
                   href={`/${page.slug}`}

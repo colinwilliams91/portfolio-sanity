@@ -13,6 +13,7 @@ const ProjectCard: FC<Project> = (project: Project) => {
       whileTap={{ scale: 0.97 }}
       transition={{ type: "spring", stiffness: 400, damping: 13 }}
       className="flex"
+      tabIndex={-1}
     >
       <Link
         href={`/projects/${project.slug}`}
