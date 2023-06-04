@@ -17,13 +17,13 @@ const Home = async () => {
 
   return (
     <div>
-      <h1 className="font-light text-gray-50 text-7xl mt-12">
-        Hello I&apos;m{" "}
+      <h1 className="font-light text-gray-50 text-5xl mt-12">
+        I&apos;m a{" "}
         <span className="font-bold bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent">
-          Colin!
+          Full Stack Developer!
         </span>
       </h1>
-      <p className="mt-3 text-xl text-gray-100 ml-[5px]">
+      <p className="mt-3 font-light text-xl text-gray-50">
         Thanks for visiting my portfolio site!
       </p>
       <p className="flex justify-center mt-16 mb-8 text-xl text-gray-100">

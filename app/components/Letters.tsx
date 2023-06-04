@@ -32,6 +32,8 @@ const L: any = ({ el }: LetterProps) => {
         ),
         boxShadow: "0px 1px 2px 0px",
         textShadow: `1px 1px 1px black`,
+        cursor: "default",
+        userSelect: "none",
       }}
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 0.9, color: "cyan" }}

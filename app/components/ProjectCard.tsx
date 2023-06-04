@@ -33,7 +33,7 @@ const ProjectCard: FC<Project> = (project: Project) => {
           />
         )}
         <div
-          className="mt-2 font-extrabold
+          className="mt-2 font-extrabold text-center
         bg-gradient-to-r from-orange-400 to via-red-500
         bg-purple-600 bg-clip-text text-transparent"
         >

@@ -23,7 +23,7 @@ const Trigrams = () => {
   const throwTrigram = (index: number) => {
     return (
       <motion.span
-        className="m-3 text-gray-100"
+        className="m-3 text-gray-100 select-none"
         key={index}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
