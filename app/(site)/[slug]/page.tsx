@@ -1,6 +1,7 @@
 import { getPage } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 
+import Trigrams from "../../components/Trigrams";
 import System from "../../../app/components/System";
 import Headshot from "../../../app/components/Headshot";
 
@@ -19,10 +20,11 @@ const Page = async ({ params }: Props) => {
       <h1 className="flex bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent text-5xl font-extrabold drop-shadow justify-center">
         {page.title}
       </h1>
+      {/* {page.title === "Skills" && <Trigrams />} */}
       {/* HeadShot goes here */}
       {page.image && <Headshot {...page} />}
       <div
-        className={`prose prose-li:drop-shadow-4xl prose-strong:font-extrabold prose-strong:text-gray-200 prose-h3:text-gray-100 text-xl text-gray-400 mt-10 font-bold justify-center ${
+        className={`prose prose-li:drop-shadow-4xl prose-strong:font-extrabold prose-strong:text-gray-200 prose-h3:text-gray-100 text-xl text-gray-400 mt-5 font-bold justify-center ${
           page.title === "Contact" ? "text-center" : ""
         }`}
       >
