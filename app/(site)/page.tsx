@@ -28,7 +28,6 @@ const Home = async () => {
       </p>
       <p className="flex justify-center mt-16 mb-8 text-xl text-gray-100">
         {" "}
-        <span className="text-gray-400">--</span> &nbsp;
         <L el={"べ"} />
         <L el={"P"} />
         <L el={"r"} />
@@ -39,7 +38,6 @@ const Home = async () => {
         <L el={"t"} />
         <L el={"s"} />
         <L el={"べ"} />
-        &nbsp; <span className="text-gray-400">--</span>
       </p>
       <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
