@@ -40,6 +40,7 @@ const Background: React.FC = () => {
           color: 0xff3fff,
           color2: 0x870ff2,
           size: 1.4,
+          globeSpeed: 0.1,
           backgroundColor: 0x15082f,
         })
       );
@@ -55,11 +56,11 @@ const Background: React.FC = () => {
       <main
         ref={vantaRef}
         id="vanta-canvas"
-        className="block absolute -z-20 top-0 left-0 w-full h-[1624px] overflow-hidden"
+        className="block absolute -z-20 top-0 left-0 w-full h-[1624px] overflow-hidden opacity-[0.4]"
       ></main>
       <main
         id="blur-box"
-        className="block absolute -z-20 top-0 left-0 w-full h-[1624px] backdrop-blur-[3px] overflow-hidden"
+        className="block absolute -z-20 top-0 left-0 w-full h-[1624px] overflow-hidden"
       ></main>
       <style>
         {`

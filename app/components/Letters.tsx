@@ -38,6 +38,7 @@ const L: any = ({ el }: LetterProps) => {
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 0.9, color: "cyan" }}
       transition={{ type: "spring", stiffness: 666, damping: 6 }}
+      tabIndex={-1}
     >
       &nbsp;{el}&nbsp;
     </motion.span>
