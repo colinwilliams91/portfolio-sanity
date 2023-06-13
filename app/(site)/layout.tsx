@@ -13,14 +13,14 @@ import { Helmet } from "react-helmet";
 
 /* べ */
 
-import { metadata } from "./page";
+// import { metadata } from "./page";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { title, description } = metadata;
+  // const { title, description } = metadata;
   const [pages, setPages] = useState([]);
 
   useEffect(() => {
@@ -32,8 +32,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description}></meta>
+        <title>Colin Williams Developer Portfolio</title>
+        <meta
+          name="description"
+          content="React | Next | Sanity Portfolio Application"
+        ></meta>
       </Helmet>
       <body className="max-w-3xl mx-auto pt-20">
         <div className=" h-full w-full overflow-hidden">

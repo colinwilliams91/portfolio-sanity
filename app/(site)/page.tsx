@@ -13,10 +13,10 @@ import L from "../components/Letters";
 }
 
 /* べ */
-export const metadata = {
-  title: "Colin Williams Developer Portfolio",
-  description: "React | Next | Sanity Portfolio Application",
-};
+// export const metadata = {
+//   title: "Colin Williams Developer Portfolio",
+//   description: "React | Next | Sanity Portfolio Application",
+// };
 
 const Home = async () => {
   const projects = await getProjects();
