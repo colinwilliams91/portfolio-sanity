@@ -37,9 +37,10 @@ export default function RootLayout({
           name="description"
           content="React | Next | Sanity Portfolio Application"
         ></meta>
+        <link rel="robots" href="/robots.txt"></link>
       </Helmet>
       <body className="max-w-3xl mx-auto pt-20">
-        <div className=" h-full w-full overflow-hidden">
+        <div className="h-full w-full overflow-hidden">
           <Background />
         </div>
         <header className="flex items-center justify-between">

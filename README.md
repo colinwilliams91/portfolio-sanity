@@ -1,3 +1,7 @@
+## Note to Self 6/13/23
+
+added `vercel.json` to override servlerless (AWS Lambda) region to `cle1` per Vercel outtage issues. See `Documents/OP SPARK/PROJECTS` for screenshot of warning. Default region set to `IAD1` (iad1 ? us-east-1 ?). Remove `vercel.json` to return to default?
+
 ## Getting Started
 
 Run the development server:
