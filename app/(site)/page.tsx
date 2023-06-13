@@ -12,6 +12,12 @@ import L from "../components/Letters";
   /* <p className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}> */
 }
 
+/* べ */
+export const metadata = {
+  title: "Colin Williams Developer Portfolio",
+  description: "React | Next | Sanity Portfolio Application",
+};
+
 const Home = async () => {
   const projects = await getProjects();
 
