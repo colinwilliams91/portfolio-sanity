@@ -9,18 +9,18 @@ import { getPages } from "@/sanity/sanity-utils";
 import Background from "../components/Background";
 import ParallaxBanner from "../components/ParallaxBanner";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 /* べ */
-// export const metadata = {
-//   title: "Colin Williams Dev",
-//   description: "Live Portfolio Application",
-// };
+
+import { metadata } from "./page";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const { title, description } = metadata;
   const [pages, setPages] = useState([]);
 
   useEffect(() => {
@@ -31,6 +31,10 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description}></meta>
+      </Helmet>
       <body className="max-w-3xl mx-auto pt-20">
         <div className=" h-full w-full overflow-hidden">
           <Background />
