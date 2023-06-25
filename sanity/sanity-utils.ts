@@ -85,3 +85,15 @@ export const getPhoto = async (slug: string): Promise<Photo> => {
     { slug }
   )
 };
+
+export const getCertificates = async (): Promise<Photo[]> => {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "photo"]{
+      _id,
+      _createdAt,
+      title,
+      "slug": slug.current,
+      "image": image.asset->url
+    }`
+  )
+};
