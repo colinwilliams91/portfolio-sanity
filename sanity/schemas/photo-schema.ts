@@ -29,6 +29,11 @@ const photo = {
           type: 'string'
         }
       ]
+    },
+    {
+      name: 'url',
+      title: 'Url',
+      type: 'string'
     }
   ]
 };

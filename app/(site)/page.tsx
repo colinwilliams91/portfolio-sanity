@@ -1,10 +1,11 @@
-import { Inter } from "next/font/google";
-import { getProjects } from "@/sanity/sanity-utils";
-import Image from "next/image";
-import Link from "next/link";
+// import { Inter } from "next/font/google";
+import { getProjects, getCertificates } from "@/sanity/sanity-utils";
+// import Image from "next/image";
+// import Link from "next/link";
 
-import HomeHeadshot from "../components/HomeHeadshot";
+// import HomeHeadshot from "../components/HomeHeadshot";
 import ProjectCard from "../components/ProjectCard";
+// import Certificate from "../components/Certificate";
 import L from "../components/Letters";
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -20,10 +21,11 @@ import L from "../components/Letters";
 
 const Home = async () => {
   const projects = await getProjects();
+  // const certificates = await getCertificates();
 
   return (
     <div>
-      <h1 className="font-light text-gray-50 text-5xl mt-12">
+      <h1 className="font-bold text-gray-50 text-5xl mt-12">
         I&apos;m a{" "}
         <span className="font-bold bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent">
           Full Stack Developer!
@@ -50,6 +52,18 @@ const Home = async () => {
           <ProjectCard key={project._id} {...project} />
         ))}
       </div>
+      {/* <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {certificates.length &&
+          certificates
+            .filter(
+              (certificate) =>
+                !certificate.title.includes("Home Headshot") &&
+                !certificate.title.includes("Badge")
+            )
+            .map((certificate) => (
+              <Certificate key={certificate._id} {...certificate} />
+            ))}
+      </div> */}
       {/* <div className="flex justify-center">
         <HomeHeadshot />
       </div> */}

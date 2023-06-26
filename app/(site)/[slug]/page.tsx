@@ -1,9 +1,10 @@
-import { getPage } from "@/sanity/sanity-utils";
+import { getPage, getCertificates } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 
-import Trigrams from "../../components/Trigrams";
+// import Trigrams from "../../components/Trigrams";
 import System from "../../../app/components/System";
 import Headshot from "../../../app/components/Headshot";
+import Certificate from "../../components/Certificate";
 
 import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
 
@@ -13,6 +14,7 @@ type Props = {
 
 const Page = async ({ params }: Props) => {
   const page = await getPage(params.slug);
+  const certificates = await getCertificates();
   console.log(page.linkedIn);
 
   return (
@@ -21,6 +23,20 @@ const Page = async ({ params }: Props) => {
         {page.title}
       </h1>
       {/* {page.title === "Skills" && <Trigrams />} */}
+      {/* Certifications go here */}
+      {page.title === "Certifications" && (
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {certificates
+            .filter(
+              (certificate) =>
+                !certificate.title.includes("Home Headshot") &&
+                !certificate.title.includes("Badge")
+            )
+            .map((certificate) => (
+              <Certificate key={certificate._id} {...certificate} />
+            ))}
+        </div>
+      )}
       {/* HeadShot goes here */}
       {page.image && <Headshot {...page} />}
       <div

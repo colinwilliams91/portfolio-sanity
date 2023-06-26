@@ -2,6 +2,7 @@ import { Project } from "@/types/Project";
 import { createClient, groq } from "next-sanity";
 import { Page } from "@/types/Page";
 import { Photo } from "@/types/Photo";
+import { Link } from "@/types/Link";
 import clientConfig from "./config/client-config"
 
 export const getProjects = async (): Promise<Project[]> => {
@@ -80,7 +81,8 @@ export const getPhoto = async (slug: string): Promise<Photo> => {
       _createdAt,
       title,
       "slug": slug.current,
-      "image": image.asset->url
+      "image": image.asset->url,
+      url
     }`,
     { slug }
   )
@@ -93,7 +95,20 @@ export const getCertificates = async (): Promise<Photo[]> => {
       _createdAt,
       title,
       "slug": slug.current,
-      "image": image.asset->url
+      "image": image.asset->url,
+      url
+    }`
+  )
+};
+
+export const getLinks = async (): Promise<Link[]> => {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "link"]{
+      _id,
+      _createdAt,
+      title,
+      "slug", slug.current,
+      url
     }`
   )
 };
