@@ -77,12 +77,12 @@ export default function RootLayout({
             </Link>
           </motion.span>
           {/* Contact Nav goes here */}
-          <div className="flex flex-col items-end justify-center text-gray-100">
-            <div className="flex text-gray-100">
+          <div className="flex flex-col items-end justify-center">
+            <div className="flex">
               {links.map((contact: any) => (
                 <motion.span
                   className="h-5 w-5 mb-1 mr-3"
-                  whileHover={{ scale: 1.3, color: "rgb(103, 232, 249)" }}
+                  whileHover={{ scale: 1.35, color: "rgb(103, 232, 249)" }}
                   whileTap={{ scale: 1 }}
                   transition={{ type: "spring", stiffness: 400, damping: 13 }}
                   key={contact._id}
@@ -98,8 +98,8 @@ export default function RootLayout({
                 </motion.span>
               ))}
             </div>
-            <div className="flex items-center gap-4 text-sm text-gray-100 pb-[0.15rem]">
-              {pages.map((page: any) => (
+            <div className="flex items-center gap-4 text-sm bg-clip-text text-transparent font-bold pb-[0.15rem] bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-500">
+              {pages.map((page: any, i: number) => (
                 <motion.span
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 1 }}
@@ -107,7 +107,18 @@ export default function RootLayout({
                   key={page._id}
                   tabIndex={-1}
                 >
-                  <Link href={`/${page.slug}`} className=" hover:text-cyan-300">
+                  <Link
+                    href={`/${page.slug}`}
+                    className={`bg-clip-text text-transparent hover:bg-gradient-to-l hover:from-purple-500 to hover:bg-cyan-300 bg-gradient-to-r
+                      ${
+                        i === 0
+                          ? "from-orange-400 to bg-red-500"
+                          : i === pages.length - 1
+                          ? "from-pink-500 to bg-purple-500"
+                          : "from-red-500 to bg-pink-500"
+                      }
+                    `}
+                  >
                     {page.title}
                   </Link>
                 </motion.span>
