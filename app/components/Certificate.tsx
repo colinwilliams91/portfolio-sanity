@@ -12,9 +12,9 @@ const Certificate: any = async (prop: any) => {
     <>
       {/* <p>test</p> */}
       <motion.div
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        whileHover={{ scale: 1.1 }}
+        // onMouseEnter={() => setIsHovered(true)}
+        // onMouseLeave={() => setIsHovered(false)}
+        whileHover={{ scale: 1.15 }}
         whileTap={{ scale: 0.97 }}
         transition={{ type: "spring", stiffness: 400, damping: 13 }}
         className="flex w-[234px]"
@@ -29,7 +29,7 @@ const Certificate: any = async (prop: any) => {
           rounded-xl mt-10 h-[171px] w-[234px]"
         />
       </motion.div>
-      {isHovered && <h1 className="absolute">COLIN</h1>}
+      {/* {isHovered && <h1 className="absolute">COLIN</h1>} */}
     </>
   );
 };

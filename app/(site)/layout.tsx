@@ -3,8 +3,11 @@
 import Link from "next/link";
 import "../globals.css";
 
+import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
+
 import { useEffect, useRef, useState } from "react";
-import { getPages } from "@/sanity/sanity-utils";
+import { getLinks, getPages } from "@/sanity/sanity-utils";
+import { LinkDTO } from "@/types/Link";
 
 import Background from "../components/Background";
 import ParallaxBanner from "../components/ParallaxBanner";
@@ -22,12 +25,28 @@ export default function RootLayout({
 }) {
   // const { title, description } = metadata;
   const [pages, setPages] = useState([]);
+  const [links, setLinks] = useState<LinkDTO[]>([]);
+  const [icons, setIcons] = useState<any>({});
 
   useEffect(() => {
     getPages()
       .then((data) => setPages(data as any))
       .catch((err) => console.error("failed fetching pages", err));
+    getLinks()
+      .then((data: LinkDTO[]) => setLinks(data))
+      .catch((err) => console.error("failed fetching contact links", err));
   }, []);
+
+  useEffect(() => {
+    setIcons({
+      FaLinkedin: <FaLinkedin />,
+      FaGithub: <FaGithub />,
+      FaTwitter: <FaTwitter />,
+      FaEnvelope: <FaEnvelope />,
+    });
+  }, []);
+
+  console.log({ links });
 
   return (
     <html lang="en">
@@ -39,11 +58,11 @@ export default function RootLayout({
         ></meta>
         <link rel="robots" href="/robots.txt"></link>
       </Helmet>
-      <body className="max-w-3xl mx-auto pt-20">
+      <body className="max-w-3xl mx-auto pt-16">
         <div className="h-full w-full overflow-hidden">
           <Background />
         </div>
-        <header className="flex items-center justify-between">
+        <header className="flex items-end justify-between">
           <motion.span
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 1 }}
@@ -57,23 +76,43 @@ export default function RootLayout({
               Colin Williams
             </Link>
           </motion.span>
-          <div className="flex items-center gap-4 text-sm text-gray-100">
-            {pages.map((page: any) => (
-              <motion.span
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 1 }}
-                transition={{ type: "spring", stiffness: 400, damping: 13 }}
-                key={page._id}
-                tabIndex={-1}
-              >
-                <Link
-                  href={`/${page.slug}`}
-                  className="hover:underline hover:text-cyan-300"
+          {/* Contact Nav goes here */}
+          <div className="flex flex-col items-end justify-center text-gray-100">
+            <div className="flex text-gray-100">
+              {links.map((contact: any) => (
+                <motion.span
+                  className="h-5 w-5 mb-1 mr-3"
+                  whileHover={{ scale: 1.3, color: "rgb(103, 232, 249)" }}
+                  whileTap={{ scale: 1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 13 }}
+                  key={contact._id}
+                  tabIndex={-1}
                 >
-                  {page.title}
-                </Link>
-              </motion.span>
-            ))}
+                  <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href={contact.url}
+                  >
+                    {icons[contact.icon]}
+                  </a>
+                </motion.span>
+              ))}
+            </div>
+            <div className="flex items-center gap-4 text-sm text-gray-100 pb-[0.15rem]">
+              {pages.map((page: any) => (
+                <motion.span
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 13 }}
+                  key={page._id}
+                  tabIndex={-1}
+                >
+                  <Link href={`/${page.slug}`} className=" hover:text-cyan-300">
+                    {page.title}
+                  </Link>
+                </motion.span>
+              ))}
+            </div>
           </div>
         </header>
         <main className="py-10">{children}</main>

@@ -1,8 +1,8 @@
-import { Project } from "@/types/Project";
 import { createClient, groq } from "next-sanity";
+import { Project } from "@/types/Project";
 import { Page } from "@/types/Page";
 import { Photo } from "@/types/Photo";
-import { Link } from "@/types/Link";
+import { LinkDTO } from "@/types/Link";
 import clientConfig from "./config/client-config"
 
 export const getProjects = async (): Promise<Project[]> => {
@@ -101,14 +101,8 @@ export const getCertificates = async (): Promise<Photo[]> => {
   )
 };
 
-export const getLinks = async (): Promise<Link[]> => {
+export const getLinks = async (): Promise<LinkDTO[]> => {
   return createClient(clientConfig).fetch(
-    groq`*[_type == "link"]{
-      _id,
-      _createdAt,
-      title,
-      "slug", slug.current,
-      url
-    }`
+    groq`*[_type == "link"]`
   )
 };
