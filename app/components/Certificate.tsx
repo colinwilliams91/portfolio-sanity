@@ -27,9 +27,9 @@ const Certificate: any = async (prop: any) => {
             alt={prop.slug}
             width={234}
             height={171}
-            className="border-4 border-double
+            className="border-[3px] border-double p-1
             rounded-xl mt-10 h-[171px] w-[234px]
-            border-violet-400
+            bg-orange-400/[17%] border-violet-400
             hover:border-cyan-400 hover:bg-gradient-to-tr
             from-pink-500/40 to-cyan-300/30 transition
             "
