@@ -3,6 +3,7 @@ import React, { useState } from "react";
 // import { getPhoto } from "@/sanity/sanity-utils";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const Certificate: any = async (prop: any) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -20,14 +21,16 @@ const Certificate: any = async (prop: any) => {
         className="flex w-[234px]"
         tabIndex={-1}
       >
-        <Image
-          src={prop.image}
-          alt={prop.slug}
-          width={234}
-          height={171}
-          className="border-4 border-double border-gray-200/50
-          rounded-xl mt-10 h-[171px] w-[234px]"
-        />
+        <Link rel="noopener noreferrer" target="_blank" href={prop.url}>
+          <Image
+            src={prop.image}
+            alt={prop.slug}
+            width={234}
+            height={171}
+            className="border-4 border-double border-gray-200/50
+            rounded-xl mt-10 h-[171px] w-[234px]"
+          />
+        </Link>
       </motion.div>
       {/* {isHovered && <h1 className="absolute">COLIN</h1>} */}
     </>

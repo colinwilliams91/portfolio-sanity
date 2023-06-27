@@ -36,6 +36,7 @@ export const getProject = async (slug: string): Promise<Project> => {
   );
 };
 
+// TODO sort --> About Certifications Skills
 export const getPages = async (): Promise<Page[]> => {
   return createClient(clientConfig).fetch(
     groq`*[_type == "page"]{
