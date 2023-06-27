@@ -24,6 +24,7 @@ const Page = async ({ params }: Props) => {
       </h1>
       {/* {page.title === "Skills" && <Trigrams />} */}
       {/* Certifications go here */}
+      {/* TODO change `lg:grid-cols-3 -> 2 and remove fixed size, format actual cert images to uniform sizes */}
       {page.title === "Certifications" && (
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certificates

@@ -27,8 +27,12 @@ const Certificate: any = async (prop: any) => {
             alt={prop.slug}
             width={234}
             height={171}
-            className="border-4 border-double border-gray-200/50
-            rounded-xl mt-10 h-[171px] w-[234px]"
+            className="border-4 border-double
+            rounded-xl mt-10 h-[171px] w-[234px]
+            border-violet-400
+            hover:border-cyan-400 hover:bg-gradient-to-tr
+            from-pink-500/40 to-cyan-300/30 transition
+            "
           />
         </Link>
       </motion.div>
