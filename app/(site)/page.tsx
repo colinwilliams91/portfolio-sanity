@@ -32,7 +32,7 @@ const Home = async () => {
         </span>
       </h1>
       <p className="mt-3 font-light text-xl text-gray-50">
-        Thanks for visiting my portfolio site!
+        Contact me if you&apos;d like a project built.
       </p>
       <p className="flex justify-center mt-16 mb-8 text-xl text-gray-100">
         {" "}
