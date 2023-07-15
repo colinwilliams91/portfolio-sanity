@@ -51,25 +51,27 @@ const Page = async ({ params }: Props) => {
           </div>
           <div className="mt-14 flex flex-col items-center">
             <ul className="list-disc list-inside">
-              <li className="mx-auto">AWS Certified Cloud Practitioner</li>
-              <li className="mx-auto">
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out">
+                AWS Certified Cloud Practitioner
+              </li>
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out">
                 Advanced Certificate in Teaching English as a Foreign Language
                 (TEFL) - <i>120 hr</i>
               </li>
-              <li className="mx-auto">
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out">
                 IBC Fundamentals of Javascript, Functional Programming, & Web
                 Development Level 3 - <i>1,172 hr</i>
               </li>
-              <li className="mx-auto">
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out">
                 Vue.js Global Summit &apos;23 Certificate of Attendence
               </li>
-              <li className="mx-auto">
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out">
                 NestJS Framework Fundamentals Certification of Completion -{" "}
                 <i>8 hr</i>
               </li>
-              <li className="mx-auto">
-                Cloud Academy AWS Cloud Practitioner Preparation Course
-                Certificate of Completion - <i>30 hr</i>
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out">
+                Cloud Academy AWS Cloud Practitioner Course Certificate of
+                Completion - <i>30 hr</i>
               </li>
             </ul>
           </div>
