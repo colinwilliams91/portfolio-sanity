@@ -1,10 +1,12 @@
 import { getPage, getCertificates } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
+import Image from "next/image";
 
 // import Trigrams from "../../components/Trigrams";
 import System from "../../../app/components/System";
 import Headshot from "../../../app/components/Headshot";
 import Certificate from "../../components/Certificate";
+import Badge from "@/app/components/Badge";
 
 import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
 
@@ -26,17 +28,52 @@ const Page = async ({ params }: Props) => {
       {/* Certifications go here */}
       {/* TODO change `lg:grid-cols-3 -> 2 and remove fixed size, format actual cert images to uniform sizes */}
       {page.title === "Certifications" && (
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {certificates
-            .filter(
-              (certificate) =>
-                !certificate.title.includes("Home Headshot") &&
-                !certificate.title.includes("Badge")
-            )
-            .map((certificate) => (
-              <Certificate key={certificate._id} {...certificate} />
-            ))}
-        </div>
+        <>
+          <main className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {certificates
+              .filter(
+                (certificate) =>
+                  !certificate.title.includes("Home Headshot") &&
+                  !certificate.title.includes("Badge")
+              )
+              .map((certificate) => (
+                <Certificate key={certificate._id} {...certificate} />
+              ))}
+          </main>
+          <div className="flex justify-center mt-14">
+            <Badge
+              {...{
+                image: "/aws-certified-cloud-practitioner-204x204.png",
+                slug: "aws-badge",
+                url: "https://www.credly.com/badges/cdb945ba-a828-466b-ae44-c9e4fbfd783d/public_url",
+              }}
+            />
+          </div>
+          <div className="mt-14 flex flex-col items-center">
+            <ul className="list-disc list-inside">
+              <li className="mx-auto">AWS Certified Cloud Practitioner</li>
+              <li className="mx-auto">
+                Advanced Certificate in Teaching English as a Foreign Language
+                (TEFL) - <i>120 hr</i>
+              </li>
+              <li className="mx-auto">
+                IBC Fundamentals of Javascript, Functional Programming, & Web
+                Development Level 3 - <i>1,172 hr</i>
+              </li>
+              <li className="mx-auto">
+                Vue.js Global Summit &apos;23 Certificate of Attendence
+              </li>
+              <li className="mx-auto">
+                NestJS Framework Fundamentals Certification of Completion -{" "}
+                <i>8 hr</i>
+              </li>
+              <li className="mx-auto">
+                Cloud Academy AWS Cloud Practitioner Preparation Course
+                Certificate of Completion - <i>30 hr</i>
+              </li>
+            </ul>
+          </div>
+        </>
       )}
       {/* HeadShot goes here */}
       {page.image && <Headshot {...page} />}
@@ -45,7 +82,7 @@ const Page = async ({ params }: Props) => {
           page.title === "Contact" ? "text-center" : ""
         }`}
       >
-        <div className="text-gray-200">
+        <div className="text-gray-200 prose-a:text-blue-500">
           <PortableText value={page.content} />
         </div>
       </div>
