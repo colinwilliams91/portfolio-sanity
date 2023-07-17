@@ -73,6 +73,10 @@ const Page = async ({ params }: Props) => {
                 Cloud Academy AWS Cloud Practitioner Course Certificate of
                 Completion - <i>30 hr</i>
               </li>
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out">
+                Introduction to Kubernetes Course Certificate of Completion -{" "}
+                <i>11 hr</i>
+              </li>
             </ul>
           </div>
         </>
