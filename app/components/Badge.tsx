@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-const Badge: any = async (prop: any) => {
+const Badge: any = (prop: any) => {
   console.log(prop.url);
   return (
     <>
