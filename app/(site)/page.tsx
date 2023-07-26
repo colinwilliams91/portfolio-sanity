@@ -40,6 +40,7 @@ const Home = async () => {
           property="og:description"
           content="Building apps for passion and for pay. Contact me to set something up!"
         />
+        <meta property="og:url" content="https://www.colin-williams.dev/" />
       </Helmet>
       <h1 className="font-bold text-gray-50 text-5xl mt-12">
         I&apos;m a{" "}
