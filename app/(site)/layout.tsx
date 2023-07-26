@@ -56,19 +56,6 @@ export default function RootLayout({
           name="description"
           content="React | Next | Sanity Portfolio Application"
         ></meta>
-        <meta
-          property="og:title"
-          content="💻Colin Williams - Software Developer Portfolio"
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://res.cloudinary.com/dbdyc4klu/image/upload/v1690413467/OG_site_image_tu9a3p.jpg"
-        />
-        <meta
-          property="og:description"
-          content="Building apps for passion and for pay. Contact me to set something up!"
-        />
         <link rel="robots" href="/robots.txt"></link>
       </Helmet>
       <body className="max-w-3xl mx-auto pt-16">

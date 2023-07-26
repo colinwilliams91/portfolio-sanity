@@ -1,5 +1,6 @@
 // import { Inter } from "next/font/google";
 import { getProjects, getCertificates } from "@/sanity/sanity-utils";
+import { Helmet } from "react-helmet";
 // import Image from "next/image";
 // import Link from "next/link";
 
@@ -25,6 +26,21 @@ const Home = async () => {
 
   return (
     <div>
+      <Helmet>
+        <meta
+          property="og:title"
+          content="💻Colin Williams - Software Developer Portfolio"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dbdyc4klu/image/upload/v1690413467/OG_site_image_tu9a3p.jpg"
+        />
+        <meta
+          property="og:description"
+          content="Building apps for passion and for pay. Contact me to set something up!"
+        />
+      </Helmet>
       <h1 className="font-bold text-gray-50 text-5xl mt-12">
         I&apos;m a{" "}
         <span className="font-bold bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent">
