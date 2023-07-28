@@ -20,6 +20,8 @@ import L from "../components/Letters";
 //   description: "React | Next | Sanity Portfolio Application",
 // };
 
+// TODO: #1 Is Helmet throwing this new error? --> https://vercel.com/colinwilliams91/colin-williams-dev/2F9LFYM6k1tFU1CQWERYVVD6jzQB
+
 const Home = async () => {
   const projects = await getProjects();
   // const certificates = await getCertificates();
