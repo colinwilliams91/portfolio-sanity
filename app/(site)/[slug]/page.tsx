@@ -9,6 +9,7 @@ import Certificate from "../../components/Certificate";
 import Badge from "@/app/components/Badge";
 
 import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
+import Head from "next/head";
 
 type Props = {
   params: { slug: string };
@@ -21,6 +22,21 @@ const Page = async ({ params }: Props) => {
 
   return (
     <div>
+      <Head>
+        <title key="title">
+          💻Colin Williams - Software Developer Portfolio
+        </title>
+        <meta
+          property="og:title"
+          content="💻Colin Williams - Software Developer Portfolio"
+        />
+        <meta name="description" content={`This page is ${page.title}`}></meta>
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dbdyc4klu/image/upload/v1690413467/OG_site_image_tu9a3p.jpg"
+        />
+      </Head>
       <h1 className="flex bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent text-5xl font-extrabold drop-shadow justify-center">
         {page.title}
       </h1>

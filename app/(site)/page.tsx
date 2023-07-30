@@ -1,6 +1,7 @@
 // import { Inter } from "next/font/google";
 import { getProjects, getCertificates } from "@/sanity/sanity-utils";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
+import Head from "next/head";
 // import Image from "next/image";
 // import Link from "next/link";
 
@@ -28,7 +29,10 @@ const Home = async () => {
 
   return (
     <div>
-      <Helmet>
+      <Head>
+        <title key="title">
+          💻Colin Williams - Software Developer Portfolio
+        </title>
         <meta
           property="og:title"
           content="💻Colin Williams - Software Developer Portfolio"
@@ -43,7 +47,7 @@ const Home = async () => {
           content="Building apps for passion and for pay. Contact me to set something up!"
         />
         <meta property="og:url" content="https://www.colin-williams.dev/" />
-      </Helmet>
+      </Head>
       <h1 className="font-bold text-gray-50 text-5xl mt-12">
         I&apos;m a{" "}
         <span className="font-bold bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent">

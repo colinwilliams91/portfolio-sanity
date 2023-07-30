@@ -3,6 +3,8 @@
 import Link from "next/link";
 import "../globals.css";
 
+import Head from "next/head";
+
 import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 import { useEffect, useRef, useState } from "react";
@@ -12,7 +14,7 @@ import { LinkDTO } from "@/types/Link";
 import Background from "../components/Background";
 import ParallaxBanner from "../components/ParallaxBanner";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 
 /* べ */
 
@@ -50,14 +52,16 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <Helmet>
-        <title>Colin Williams Developer Portfolio</title>
+      <Head>
+        <title key="title">
+          💻Colin Williams - Software Developer Portfolio
+        </title>
         <meta
           name="description"
           content="React | Next | Sanity Portfolio Application"
         ></meta>
         <link rel="robots" href="/robots.txt"></link>
-      </Helmet>
+      </Head>
       <body className="max-w-3xl mx-auto pt-16">
         <div className="h-full w-full overflow-hidden">
           <Background />
