@@ -30,7 +30,11 @@ const Page = async ({ params }: Props) => {
           property="og:title"
           content="💻Colin Williams - Software Developer Portfolio"
         />
-        <meta name="description" content={`This page is ${page.title}`}></meta>
+        <meta
+          name="description"
+          content={`This page is ${page.title}`}
+          key="description"
+        ></meta>
         <meta property="og:type" content="website" />
         <meta
           property="og:image"

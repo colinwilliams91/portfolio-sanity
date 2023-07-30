@@ -59,6 +59,7 @@ export default function RootLayout({
         <meta
           name="description"
           content="React | Next | Sanity Portfolio Application"
+          key="description"
         ></meta>
         <link rel="robots" href="/robots.txt"></link>
       </Head>
