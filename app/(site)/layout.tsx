@@ -52,25 +52,6 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <Head>
-        {/* <!-- Primary Meta Tags --> */}
-        <title>💻 Colin Williams, Full Stack Software Developer.</title>
-        <meta name="title" content="💻 Colin Williams, Full Stack Software Developer." />
-        <meta name="description" content="I write code for work and play. Contact me if you want an app built for web, mobile or native." />
-        {/* <!-- Open Graph / Facebook --> */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.colin-williams.dev/" />
-        <meta property="og:title" content="💻 Colin Williams, Full Stack Software Developer." />
-        <meta property="og:description" content="I write code for work and play. Contact me if you want an app built for web, mobile or native." />
-        <meta property="og:image" content="https://res.cloudinary.com/dbdyc4klu/image/upload/v1693501459/portfolio-1200-628_fgyrtz.jpg" />
-        {/* <!-- Twitter --> */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.colin-williams.dev/" />
-        <meta property="twitter:title" content="💻 Colin Williams, Full Stack Software Developer." />
-        <meta property="twitter:description" content="I write code for work and play. Contact me if you want an app built for web, mobile or native." />
-        <meta property="twitter:image" content="https://res.cloudinary.com/dbdyc4klu/image/upload/v1693501459/portfolio-1200-628_fgyrtz.jpg" />
-        <link rel="robots" href="/robots.txt"></link>
-      </Head>
       <body className="max-w-3xl mx-auto pt-16">
         <div className="h-full w-full overflow-hidden">
           <Background />

@@ -2,6 +2,7 @@
 import { getProjects, getCertificates } from "@/sanity/sanity-utils";
 // import { Helmet } from "react-helmet";
 import Head from "next/head";
+import { Metadata } from "next";
 // import Image from "next/image";
 // import Link from "next/link";
 
@@ -16,10 +17,23 @@ import L from "../components/Letters";
 }
 
 /* べ */
-// export const metadata = {
-//   title: "Colin Williams Developer Portfolio",
-//   description: "React | Next | Sanity Portfolio Application",
-// };
+export const metadata: Metadata = {
+  title: "💻 Colin Williams, Full Stack Software Developer.",
+  description: "I write code for work and play. Contact me if you want an app built for web, mobile or native.",
+  openGraph: {
+    type: "website",
+    url: "https://www.colin-williams.dev/",
+    title: "💻 Colin Williams, Full Stack Software Developer.",
+    description: "I write code for work and play. Contact me if you want an app built for web, mobile or native.",
+    images: "https://res.cloudinary.com/dbdyc4klu/image/upload/v1693501459/portfolio-1200-628_fgyrtz.jpg"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "💻 Colin Williams, Full Stack Software Developer.",
+    description: "I write code for work and play. Contact me if you want an app built for web, mobile or native.",
+    images: "https://res.cloudinary.com/dbdyc4klu/image/upload/v1693501459/portfolio-1200-628_fgyrtz.jpg",
+  }
+};
 
 // TODO: #1 Is Helmet throwing this new error? --> https://vercel.com/colinwilliams91/colin-williams-dev/2F9LFYM6k1tFU1CQWERYVVD6jzQB
 
@@ -29,24 +43,6 @@ const Home = async () => {
 
   return (
     <div>
-      <Head>
-        {/* <!-- Primary Meta Tags --> */}
-        <title>💻 Colin Williams, Full Stack Software Developer.</title>
-        <meta name="title" content="💻 Colin Williams, Full Stack Software Developer." />
-        <meta name="description" content="I write code for work and play. Contact me if you want an app built for web, mobile or native." />
-        {/* <!-- Open Graph / Facebook --> */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.colin-williams.dev/" />
-        <meta property="og:title" content="💻 Colin Williams, Full Stack Software Developer." />
-        <meta property="og:description" content="I write code for work and play. Contact me if you want an app built for web, mobile or native." />
-        <meta property="og:image" content="https://res.cloudinary.com/dbdyc4klu/image/upload/v1693501459/portfolio-1200-628_fgyrtz.jpg" />
-        {/* <!-- Twitter --> */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.colin-williams.dev/" />
-        <meta property="twitter:title" content="💻 Colin Williams, Full Stack Software Developer." />
-        <meta property="twitter:description" content="I write code for work and play. Contact me if you want an app built for web, mobile or native." />
-        <meta property="twitter:image" content="https://res.cloudinary.com/dbdyc4klu/image/upload/v1693501459/portfolio-1200-628_fgyrtz.jpg" />
-      </Head>
       <h1 className="font-bold text-gray-50 text-5xl mt-12">
         I&apos;m a{" "}
         <span className="font-bold bg-gradient-to-r from-orange-400 to via-red-500 bg-purple-600 bg-clip-text text-transparent">
