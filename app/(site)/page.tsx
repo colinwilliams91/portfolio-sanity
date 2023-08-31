@@ -30,23 +30,22 @@ const Home = async () => {
   return (
     <div>
       <Head>
-        <title key="title">
-          💻Colin Williams - Software Developer Portfolio
-        </title>
-        <meta
-          property="og:title"
-          content="💻Colin Williams - Software Developer Portfolio"
-        />
+        {/* <!-- Primary Meta Tags --> */}
+        <title>💻 Colin Williams, Full Stack Software Developer.</title>
+        <meta name="title" content="💻 Colin Williams, Full Stack Software Developer." />
+        <meta name="description" content="I write code for work and play. Contact me if you want an app built for web, mobile or native." />
+        {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://res.cloudinary.com/dbdyc4klu/image/upload/v1690413467/OG_site_image_tu9a3p.jpg"
-        />
-        <meta
-          property="og:description"
-          content="Building apps for passion and for pay. Contact me to set something up!"
-        />
         <meta property="og:url" content="https://www.colin-williams.dev/" />
+        <meta property="og:title" content="💻 Colin Williams, Full Stack Software Developer." />
+        <meta property="og:description" content="I write code for work and play. Contact me if you want an app built for web, mobile or native." />
+        <meta property="og:image" content="https://res.cloudinary.com/dbdyc4klu/image/upload/v1693501459/portfolio-1200-628_fgyrtz.jpg" />
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.colin-williams.dev/" />
+        <meta property="twitter:title" content="💻 Colin Williams, Full Stack Software Developer." />
+        <meta property="twitter:description" content="I write code for work and play. Contact me if you want an app built for web, mobile or native." />
+        <meta property="twitter:image" content="https://res.cloudinary.com/dbdyc4klu/image/upload/v1693501459/portfolio-1200-628_fgyrtz.jpg" />
       </Head>
       <h1 className="font-bold text-gray-50 text-5xl mt-12">
         I&apos;m a{" "}
