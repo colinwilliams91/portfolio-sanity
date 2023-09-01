@@ -3,8 +3,7 @@
 import Link from "next/link";
 import "../globals.css";
 
-import Head from "next/head";
-
+import { Analytics } from '@vercel/analytics/react';
 import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 import { useEffect, useRef, useState } from "react";
@@ -125,6 +124,7 @@ export default function RootLayout({
           ┄ COPYRIGHT © 2023 C B WILLIAMS ┄
         </div>
         {/* <ParallaxBanner /> */}
+        <Analytics />
       </body>
     </html>
   );
