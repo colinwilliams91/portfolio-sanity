@@ -53,6 +53,15 @@ const Page = async ({ params }: Props) => {
           <div className="mt-14 flex flex-col items-center">
             <ul className="list-disc list-inside">
               <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out">
+                Cloud Academy Practical C# Programming Course Certificate of Completion - <i>14 hr</i>
+              </li>
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out">
+                C# Classes, Interfaces & OOP Intermediate Course Certificate of Completion - <i>8 hr</i>
+              </li>
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out">
+                Microsoft Foundational C# Certificate - <i>33 hr</i>
+              </li>
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out">
                 AWS Certified Cloud Practitioner
               </li>
               <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out">
