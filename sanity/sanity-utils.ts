@@ -5,8 +5,10 @@ import { Photo } from "@/types/Photo";
 import { LinkDTO } from "@/types/Link";
 import clientConfig from "./config/client-config"
 
+const sanityClient = createClient(clientConfig);
+
 export const getProjects = async (): Promise<Project[]> => {
-  return createClient(clientConfig).fetch(
+  return sanityClient.fetch(
     groq`*[_type == "project"] | order(_updatedAt desc) {
       _id,
       _createdAt,
@@ -21,7 +23,7 @@ export const getProjects = async (): Promise<Project[]> => {
 };
 
 export const getProject = async (slug: string): Promise<Project> => {
-  return createClient(clientConfig).fetch(
+  return sanityClient.fetch(
     groq`*[_type == "project" && slug.current == $slug][0]{
       _id,
       _createdAt,
@@ -38,7 +40,7 @@ export const getProject = async (slug: string): Promise<Project> => {
 
 // TODO sort --> About Certifications Skills
 export const getPages = async (): Promise<Page[]> => {
-  return createClient(clientConfig).fetch(
+  return sanityClient.fetch(
     groq`*[_type == "page"]{
       _id,
       _createdAt,
@@ -50,7 +52,7 @@ export const getPages = async (): Promise<Page[]> => {
 };
 
 export const getPage = async (slug: string): Promise<Page> => {
-  return createClient(clientConfig).fetch(
+  return sanityClient.fetch(
     groq`*[_type == "page" && slug.current == $slug][0]{
       _id,
       _createdAt,
@@ -76,7 +78,7 @@ export const getPage = async (slug: string): Promise<Page> => {
 };
 
 export const getPhoto = async (slug: string): Promise<Photo> => {
-  return createClient(clientConfig).fetch(
+  return sanityClient.fetch(
     groq`*[_type == "photo" && slug.current == $slug][0]{
       _id,
       _createdAt,
@@ -90,7 +92,7 @@ export const getPhoto = async (slug: string): Promise<Photo> => {
 };
 
 export const getCertificates = async (): Promise<Photo[]> => {
-  return createClient(clientConfig).fetch(
+  return sanityClient.fetch(
     groq`*[_type == "photo"]{
       _id,
       _createdAt,
@@ -103,7 +105,7 @@ export const getCertificates = async (): Promise<Photo[]> => {
 };
 
 export const getLinks = async (): Promise<LinkDTO[]> => {
-  return createClient(clientConfig).fetch(
+  return sanityClient.fetch(
     groq`*[_type == "link"]`
   )
 };
