@@ -121,7 +121,7 @@ export default function RootLayout({
         </header>
         <main className="py-10">{children}</main>
         <div className="relative text-gray-300 text-xs text-center mt-5">
-          ┄ COPYRIGHT © 2023 C B WILLIAMS ┄
+          ┄ COPYRIGHT © 2024 C B WILLIAMS ┄
         </div>
         {/* <ParallaxBanner /> */}
         <Analytics />
