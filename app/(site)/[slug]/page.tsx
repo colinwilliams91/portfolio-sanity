@@ -52,38 +52,38 @@ const Page = async ({ params }: Props) => {
           </div>
           <div className="mt-14 flex flex-col items-center">
             <ul className="list-disc list-inside">
-              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-pointer">
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
                 Cloud Academy Practical C# Programming Course Certificate of Completion - <i>14 hr</i>
               </li>
-              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-pointer">
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
                 C# Classes, Interfaces & OOP Intermediate Course Certificate of Completion - <i>8 hr</i>
               </li>
-              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-pointer">
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
                 Microsoft Foundational C# Certificate - <i>33 hr</i>
               </li>
-              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-pointer">
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
                 AWS Certified Cloud Practitioner
               </li>
-              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-pointer">
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
                 Advanced Certificate in Teaching English as a Foreign Language
                 (TEFL) - <i>120 hr</i>
               </li>
-              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-pointer">
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
                 IBC Fundamentals of Javascript, Functional Programming, & Web
                 Development Level 3 - <i>1,172 hr</i>
               </li>
-              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-pointer">
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
                 Vue.js Global Summit &apos;23 Certificate of Attendence
               </li>
-              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-pointer">
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
                 NestJS Framework Fundamentals Certification of Completion -{" "}
                 <i>8 hr</i>
               </li>
-              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-pointer">
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
                 Cloud Academy AWS Cloud Practitioner Course Certificate of
                 Completion - <i>30 hr</i>
               </li>
-              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-pointer">
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
                 Introduction to Kubernetes Course Certificate of Completion -{" "}
                 <i>11 hr</i>
               </li>
