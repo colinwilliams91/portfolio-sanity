@@ -99,7 +99,8 @@ export const getCertificates = async (): Promise<Photo[]> => {
       title,
       "slug": slug.current,
       "image": image.asset->url,
-      url
+      url,
+      description
     }`
   )
 };

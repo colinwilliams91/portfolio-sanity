@@ -34,6 +34,11 @@ const photo = {
       name: 'url',
       title: 'Url',
       type: 'string'
+    },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'string'
     }
   ]
 };
