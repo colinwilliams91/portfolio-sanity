@@ -76,7 +76,7 @@ const Page = async ({ params }: Props) => {
                 Development Level 3 - <i>1,172 hr</i>
               </li>
               <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
-                Vue.js Global Summit &apos;23 Certificate of Attendence
+                Vue.js Global Summit &apos;23 Certificate of Attendance
               </li>
               <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
                 NestJS Framework Fundamentals Certification of Completion -{" "}
