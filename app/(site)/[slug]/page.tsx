@@ -55,6 +55,12 @@ const Page = async ({ params }: Props) => {
               <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
                 State University of New York at New Paltz Bachelor of Arts in English - <i>4,800 hr</i>
               </li>
+              {/* <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
+                Certified Associate in Project Management (CAPM)
+              </li>
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
+                Google Project Management Professional: Certificate - <i>250 hr</i>
+              </li> */}
               <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
                 Cloud Academy Practical C# Programming Course Certificate of Completion - <i>14 hr</i>
               </li>

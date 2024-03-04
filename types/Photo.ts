@@ -4,4 +4,5 @@ export type Photo = {
   title: string;
   slug: string;
   image: string;
+  description: string;
 };
