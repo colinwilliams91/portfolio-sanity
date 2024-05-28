@@ -42,7 +42,10 @@ const Project = async ({ params }: Props) => {
           className="rounded-2xl p-1 bg-orange-400/[17%]
           border-[2px] border-violet-400 my-5
           hover:border-cyan-400 hover:bg-gradient-to-tr
-          from-pink-500/40 to-cyan-300/30 transition">
+          from-pink-500/40 to-cyan-300/30 transition"
+          target="_blank"
+          rel="noopener noreferrer"
+          key={project._id}>
           <Image
             src={project.image}
             alt={project.name}
