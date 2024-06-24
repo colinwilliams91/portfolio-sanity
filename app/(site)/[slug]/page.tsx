@@ -55,6 +55,9 @@ const Page = async ({ params }: Props) => {
               <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
                 State University of New York at New Paltz Bachelor of Arts in English - <i>4,800 hr</i>
               </li>
+              <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
+                Unity Certified Associate Programmer Level 2 - UCAP-720
+              </li>
               {/* <li className="text-lg mt-1 font-bold hover:text-cyan-400 transition duration-100 ease-in-out cursor-default">
                 Certified Associate in Project Management (CAPM)
               </li>
