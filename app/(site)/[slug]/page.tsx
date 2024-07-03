@@ -49,6 +49,13 @@ const Page = async ({ params }: Props) => {
                 url: "https://www.credly.com/badges/cdb945ba-a828-466b-ae44-c9e4fbfd783d/public_url",
               }}
             />
+            <Badge
+            {...{
+              image: "/unity-certified-associate-programmer-204x204.png",
+              slug: "unity-badge",
+              url: "https://www.credly.com/badges/60bd0c80-8eac-447a-95c7-5965f8f544a6/public_url",
+            }}
+          />
           </div>
           <div className="mt-14 flex flex-col items-center overflow-scroll h-28">
             <ul className="list-disc list-inside">
