@@ -36,3 +36,19 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* scroll bar looks bad, can't get this to work.. */
+/* @layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    scrollbar-color: #ab00d6;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    scrollbar-color: #ff2fd2;
+  }
+} */
